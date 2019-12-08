@@ -1,0 +1,6 @@
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Release\DTO_QuanLi.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Release\DTO_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Release\DTO_QuanLi.csprojAssemblyReference.cache
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Release\DTO_QuanLi.csproj.CoreCompileInputs.cache
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Release\DTO_QuanLi.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Release\DTO_QuanLi.pdb

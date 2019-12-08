@@ -1,0 +1,17 @@
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\GUI_QuanLi.exe.config
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\GUI_QuanLi.exe
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\GUI_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\BUS_QuanLi.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\DTO_QuanLi.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\MaterialSkin.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\BUS_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Release\DTO_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.csprojAssemblyReference.cache
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.frmDangNhap.resources
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.frmTaoTaiKhoan.resources
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.Properties.Resources.resources
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.csproj.GenerateResource.cache
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.csproj.CoreCompileInputs.cache
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.csproj.CopyComplete
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.exe
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Release\GUI_QuanLi.pdb
