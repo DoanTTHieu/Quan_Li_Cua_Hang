@@ -10,3 +10,9 @@ E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\D
 E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csproj.CoreCompileInputs.cache
 E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.dll
 E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.pdb
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.dll
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.pdb
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csprojAssemblyReference.cache
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csproj.CoreCompileInputs.cache
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.dll
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.pdb
