@@ -9,3 +9,14 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DAL_QuanL
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DTO_QuanLi.pdb
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.csprojAssemblyReference.cache
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.csproj.CopyComplete
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\BUS_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\BUS_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DAL_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DTO_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DAL_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\bin\Debug\DTO_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.csprojAssemblyReference.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.csproj.CoreCompileInputs.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.csproj.CopyComplete
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\BUS_QuanLi\obj\Debug\BUS_QuanLi.pdb

@@ -4,3 +4,9 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanL
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.dll
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.pdb
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csprojAssemblyReference.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csprojAssemblyReference.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csproj.CoreCompileInputs.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.pdb
