@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS_QuanLi
+namespace DAL_QuanLi
 {
-    class BUS_QuanLi
+    class DAL_CTHD
     {
     }
 }

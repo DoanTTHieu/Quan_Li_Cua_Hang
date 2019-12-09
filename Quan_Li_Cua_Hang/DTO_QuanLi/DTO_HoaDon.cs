@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLi
 {
-    class DTO_HoaDon
+    public class DTO_HoaDon
     {
         private int mahd;
         private DateTime ngayhd;

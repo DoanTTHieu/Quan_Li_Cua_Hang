@@ -7,5 +7,3 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Debug\DAL_QuanL
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Debug\DAL_QuanLi.csproj.CopyComplete
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Debug\DAL_QuanLi.dll
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Debug\DAL_QuanLi.pdb
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Debug\DAL_QuanLi.dll.CodeAnalysisLog.xml
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Debug\DAL_QuanLi.dll.lastcodeanalysissucceeded

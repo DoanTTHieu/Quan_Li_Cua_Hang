@@ -3,5 +3,4 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanL
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.pdb
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.dll
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.pdb
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.dll.CodeAnalysisLog.xml
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\bin\Debug\DTO_QuanLi.dll.lastcodeanalysissucceeded
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DTO_QuanLi\obj\Debug\DTO_QuanLi.csprojAssemblyReference.cache

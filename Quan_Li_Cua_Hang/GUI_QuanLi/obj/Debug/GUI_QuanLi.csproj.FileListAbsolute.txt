@@ -15,3 +15,7 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanL
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\MaterialSkin.dll
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmTaoTaiKhoan.resources
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDangNhap.resources
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DAL_QuanLi.dll
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DAL_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmNhanVien.resources
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmQuanLi.resources

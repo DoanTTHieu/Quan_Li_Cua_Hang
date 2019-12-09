@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLi
 {
-    class DTO_CTHD
+    public class DTO_CTHD
     {
         private int mahd;
         private int mamon;
