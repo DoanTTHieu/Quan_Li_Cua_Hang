@@ -25,11 +25,11 @@ namespace GUI_QuanLi
             manager.AddFormToManage(this);
             manager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             manager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Blue300, MaterialSkin.Primary.Blue500, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.LightBlue400, MaterialSkin.TextShade.WHITE);
-            this.KeyDown += FrmDangNhap_KeyDown;
         }
 
         private void FrmDangNhap_KeyDown(object sender, KeyEventArgs e)
         {
+            this.btn_DangNhap.Focus();
 
             if (e.KeyCode == Keys.Enter)
             {

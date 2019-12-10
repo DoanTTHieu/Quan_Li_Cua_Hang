@@ -14,48 +14,6 @@ namespace DAL_QuanLi
 
         public string DangNhap(string un, string pw)
         {
-            // int result = -1;
-
-            // _conn.Open();
-            // //SqlCommand cmd = new SqlCommand("select * from NHANVIEN where dangnhap=@un and pass=@pw", _conn);
-            // SqlCommand cmd1 = new SqlCommand("select chucvu from NHANVIEN where dangnhap=@un and pass=@pw", _conn);
-            // //
-            //// cmd.Parameters.AddWithValue("@un", un);
-            // //cmd.Parameters.AddWithValue("@pw", pw);
-
-            // cmd1.Parameters.AddWithValue("@un", un);
-            // cmd1.Parameters.AddWithValue("@pw", pw);
-
-            // SqlDataReader reader1 = cmd1.ExecuteReader();
-            // if (reader1.Read())
-            // {
-            //     //if (reader1["dangnhap"].ToString().Equals(un, StringComparison.InvariantCulture) && reader1["pass"].ToString().Equals(pw, StringComparison.InvariantCulture))
-            //     //{
-            //         result = int.Parse(reader1["chucvu"].ToString());
-            //         //result = int.Parse(reader["chucvu"].ToString());
-            //         reader1.Close();
-            //         cmd1.Dispose();
-            //         //SqlDataReader reader1 = cmd1.ExecuteReader();
-
-            //         //if (reader1.Read())
-            //         //{
-            //         //    //reader1["chucvu"].GetValues();
-            //         //    //result = reader1.GetInt32(0
-            //         //    result = int.Parse(reader1["chucvu"].ToString());
-            //         //}
-            //         //else
-            //         //    result = -1;
-            //         //reader1.Close();
-            //         //cmd1.Dispose();
-            //     //}
-            //     //else
-            //     //    result = -1;
-            // }
-            // else
-            //     result = -1;
-            // _conn.Close();
-            // return result;
-          
                 string chucvu= "-1";
                 try
                 {
@@ -89,6 +47,74 @@ namespace DAL_QuanLi
                 }
                 return chucvu;
           
+        }
+
+        public int TaoTaiKhoan(string un, string pw1, string pw2, int cv)
+        {
+            int tam = 0;
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE dangnhap ='" + un + "'" , _conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt == null)
+                {
+                    tam = -1;//da co tai khoan
+                }
+                else
+                {
+                    tam = 1;//chua ton tai tai khoan
+                }
+            }
+            catch (Exception)
+            {
+                //return "-1";
+                //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            if(tam==1)
+            {
+                try
+                {
+                    if (pw1 != pw2)
+                        return 3;//mau khau xac nhan chua dung
+                    else
+                    {
+                        _conn.Open();
+                        string SQL1 = string.Format("INSERT INTO NHANVIEN(dangnhap,pass, chucvu) VALUES ('{0}', '{1}', '{2}')", un, pw1, cv);
+                        SqlCommand cmd1 = new SqlCommand(SQL1, _conn);
+                        SqlDataAdapter da = new SqlDataAdapter(cmd1);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt != null)
+                        {
+
+                        }
+                        else
+                        {
+                            tam = -1;
+                        }
+                        return 2;//nhap dung mat khau xac nhan
+
+                    }
+                    
+                }
+                catch (Exception)
+                {
+                    //return "-1";
+                    //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
+                }
+                finally
+                {
+                    _conn.Close();
+                }
+            }
+            return tam;
         }
     }
 }

@@ -15,5 +15,9 @@ namespace BUS_QuanLi
         {
             return ql.DangNhap(us,pw);
         }
+        public int TaoTaiKhoan(string us, string pw1, string pw2, int cv)
+        {
+            return ql.TaoTaiKhoan(us, pw1, pw2,cv);
+        }
     }
 }

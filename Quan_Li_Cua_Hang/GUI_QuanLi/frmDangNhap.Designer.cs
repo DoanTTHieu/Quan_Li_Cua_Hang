@@ -133,6 +133,7 @@ namespace GUI_QuanLi
             this.btn_DangNhap.Text = "LOG IN";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.Btn_DangNhap_Click);
+            this.btn_DangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDangNhap_KeyDown);
             // 
             // pictureBox1
             // 

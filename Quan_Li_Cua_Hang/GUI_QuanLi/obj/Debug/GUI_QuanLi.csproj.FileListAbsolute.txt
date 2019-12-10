@@ -62,3 +62,4 @@ D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.csproj.CopyComplete
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.exe
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.pdb
+C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.HoaDon.resources
