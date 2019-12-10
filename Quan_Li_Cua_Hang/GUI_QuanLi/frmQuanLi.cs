@@ -17,5 +17,18 @@ namespace GUI_QuanLi
         {
             InitializeComponent();
         }
+
+        private void Btn_DangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                frmDangNhap frm = new frmDangNhap();
+                frm.ShowDialog();
+                this.Close();
+            }
+            return;
+        }
     }
 }
