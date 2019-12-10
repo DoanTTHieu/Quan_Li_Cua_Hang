@@ -30,5 +30,13 @@ namespace GUI_QuanLi
             }
             return;
         }
+
+        private void btn_DoanhThu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmDoanhThu frm = new frmDoanhThu();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }

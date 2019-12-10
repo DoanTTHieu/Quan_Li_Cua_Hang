@@ -67,3 +67,4 @@ C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanL
 E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmCTHD.resources
 E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.HoaDon.resources
 C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDoanhThu.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDoanhThu.resources
