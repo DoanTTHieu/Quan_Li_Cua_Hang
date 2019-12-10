@@ -95,8 +95,20 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="NV-UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NV-UserControl.Designer.cs">
+      <DependentUpon>NV-UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QL-UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QL-UserControl.Designer.cs">
+      <DependentUpon>QL-UserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmCTHD.resx">
       <DependentUpon>frmCTHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +130,9 @@
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NV-UserControl.resx">
+      <DependentUpon>NV-UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -128,6 +143,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QL-UserControl.resx">
+      <DependentUpon>QL-UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

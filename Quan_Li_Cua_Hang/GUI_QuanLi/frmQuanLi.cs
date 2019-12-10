@@ -38,5 +38,6 @@ namespace GUI_QuanLi
             frm.ShowDialog();
             this.Close();
         }
+
     }
 }

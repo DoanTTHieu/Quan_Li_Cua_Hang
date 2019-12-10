@@ -14,7 +14,7 @@ namespace DAL_QuanLi
         //sinh
         protected SqlConnection _conn = new SqlConnection("Data Source = COMPUTER; Initial Catalog = QLCH; Integrated Security = True");
         //Ngân
-        // SqlConnection _conn = new SqlConnection("Data Source = DESKTOP-UMICKKN; Initial Catalog = QLCH; Integrated Security = True");
+        //protected SqlConnection _conn = new SqlConnection("Data Source = DESKTOP-UMICKKN; Initial Catalog = QLCH; Integrated Security = True");
 
     }
 }
