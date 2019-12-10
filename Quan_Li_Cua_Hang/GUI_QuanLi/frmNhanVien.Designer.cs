@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ThemHoaDon = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -50,10 +50,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1027, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(172, 583);
             this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(0, 134);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(172, 1);
+            this.panel4.TabIndex = 1;
             // 
             // btn_Thoat
             // 
@@ -66,7 +74,7 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Thoat.Location = new System.Drawing.Point(39, 194);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(83, 25);
             this.btn_Thoat.TabIndex = 2;
@@ -89,7 +97,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI_QuanLi.Properties.Resources.user2;
             this.pictureBox1.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +110,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btn_ThemHoaDon);
             this.panel2.Location = new System.Drawing.Point(2, 68);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1018, 574);
             this.panel2.TabIndex = 2;
@@ -115,7 +123,7 @@
             this.btn_ThemHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
             this.btn_ThemHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThemHoaDon.Location = new System.Drawing.Point(20, 20);
-            this.btn_ThemHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_ThemHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btn_ThemHoaDon.Name = "btn_ThemHoaDon";
             this.btn_ThemHoaDon.Size = new System.Drawing.Size(300, 450);
             this.btn_ThemHoaDon.TabIndex = 0;
@@ -129,14 +137,6 @@
             this.panel3.Size = new System.Drawing.Size(1, 580);
             this.panel3.TabIndex = 1;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(0, 134);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(172, 1);
-            this.panel4.TabIndex = 1;
-            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,8 +145,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân Viên";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

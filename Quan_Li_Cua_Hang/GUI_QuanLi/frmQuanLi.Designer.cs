@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lí";
             this.ResumeLayout(false);
 
