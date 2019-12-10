@@ -1,9 +1,0 @@
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Release\DAL_QuanLi.dll
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Release\DAL_QuanLi.pdb
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Release\DTO_QuanLi.dll
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\bin\Release\DTO_QuanLi.pdb
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Release\DAL_QuanLi.csprojAssemblyReference.cache
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Release\DAL_QuanLi.csproj.CoreCompileInputs.cache
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Release\DAL_QuanLi.csproj.CopyComplete
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Release\DAL_QuanLi.dll
-C:\GITHUB\Do_An\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\DAL_QuanLi\obj\Release\DAL_QuanLi.pdb
