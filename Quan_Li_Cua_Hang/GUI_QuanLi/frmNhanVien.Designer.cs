@@ -28,20 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_ThemHoaDon = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_Thoat);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(1476, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 882);
+            this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 243);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Username";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btn_ThemHoaDon);
+            this.panel2.Location = new System.Drawing.Point(33, 117);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1356, 871);
+            this.panel2.TabIndex = 2;
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.White;
+            this.btn_Thoat.FlatAppearance.BorderSize = 0;
+            this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Thoat.Location = new System.Drawing.Point(59, 299);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(124, 38);
+            this.btn_Thoat.TabIndex = 2;
+            this.btn_Thoat.Text = " ";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
+            // 
+            // btn_ThemHoaDon
+            // 
+            this.btn_ThemHoaDon.BackgroundImage = global::GUI_QuanLi.Properties.Resources.plus;
+            this.btn_ThemHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ThemHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThemHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
+            this.btn_ThemHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThemHoaDon.Location = new System.Drawing.Point(27, 20);
+            this.btn_ThemHoaDon.Name = "btn_ThemHoaDon";
+            this.btn_ThemHoaDon.Size = new System.Drawing.Size(450, 692);
+            this.btn_ThemHoaDon.TabIndex = 0;
+            this.btn_ThemHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::GUI_QuanLi.Properties.Resources.user2;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1800, 1000);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_ThemHoaDon;
     }
 }
