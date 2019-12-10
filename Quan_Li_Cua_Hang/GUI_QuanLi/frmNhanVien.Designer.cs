@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_ThemHoaDon = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -49,20 +49,11 @@
             this.panel1.Controls.Add(this.btn_Thoat);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(2224, 130);
+            this.panel1.Location = new System.Drawing.Point(1009, 65);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 1164);
+            this.panel1.Size = new System.Drawing.Size(190, 650);
             this.panel1.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(0, 268);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(373, 3);
-            this.panel4.TabIndex = 1;
             // 
             // btn_Thoat
             // 
@@ -72,12 +63,12 @@
             this.btn_Thoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btn_Thoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Thoat.Location = new System.Drawing.Point(84, 387);
+            this.btn_Thoat.Location = new System.Drawing.Point(48, 189);
             this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(179, 49);
+            this.btn_Thoat.Size = new System.Drawing.Size(104, 31);
             this.btn_Thoat.TabIndex = 2;
             this.btn_Thoat.Text = "Log Out";
             this.btn_Thoat.UseVisualStyleBackColor = false;
@@ -86,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 316);
+            this.label1.Location = new System.Drawing.Point(57, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 18);
@@ -97,10 +88,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI_QuanLi.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 19);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 257);
+            this.pictureBox1.Size = new System.Drawing.Size(115, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -133,11 +124,20 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(2222, 130);
+            this.panel3.Location = new System.Drawing.Point(1005, 65);
             this.panel3.Margin = new System.Windows.Forms.Padding(6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 1160);
+            this.panel3.Size = new System.Drawing.Size(1, 650);
             this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(1, 144);
+            this.panel4.Margin = new System.Windows.Forms.Padding(6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 1);
+            this.panel4.TabIndex = 1;
             // 
             // frmNhanVien
             // 
@@ -145,8 +145,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhanVien";
