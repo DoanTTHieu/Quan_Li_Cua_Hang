@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace GUI_QuanLi
 {
-    public partial class QL_UserControl : UserControl
+    public partial class NhanVien_Nuoc : UserControl
     {
-        public QL_UserControl()
+        public NhanVien_Nuoc()
         {
             InitializeComponent();
         }
 
+        private void NhanVien_Nuoc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

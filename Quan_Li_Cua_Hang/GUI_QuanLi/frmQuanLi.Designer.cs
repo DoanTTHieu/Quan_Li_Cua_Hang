@@ -86,6 +86,7 @@
             this.button1.Size = new System.Drawing.Size(250, 250);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // tabPage2
             // 
@@ -112,6 +113,7 @@
             this.button2.Size = new System.Drawing.Size(250, 300);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // materialTabSelector1
             // 

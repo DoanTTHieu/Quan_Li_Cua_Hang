@@ -39,5 +39,22 @@ namespace GUI_QuanLi
             this.Close();
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Point startpoint = new Point(1, 0);
+            QL_UserControl monan = new QL_UserControl();
+            monan.Location = new Point(startpoint.X + 250, startpoint.Y);
+            //<tên giao diện>.Controls.Add(monan)
+            startpoint.X += 250;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Point startpoint = new Point(1, 20);
+            QuanLy_Nuoc nuoc = new QuanLy_Nuoc();
+            nuoc.Location = new Point(startpoint.X + 250, startpoint.Y);
+            //<tên giao diện>.Controls.Add(monan)
+            startpoint.X += 250;
+        }
     }
 }

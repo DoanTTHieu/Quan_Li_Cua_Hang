@@ -160,7 +160,7 @@
             this.btnAddbill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddbill.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAddbill.Image = ((System.Drawing.Image)(resources.GetObject("btnAddbill.Image")));
-            this.btnAddbill.Location = new System.Drawing.Point(153, 199);
+            this.btnAddbill.Location = new System.Drawing.Point(208, 199);
             this.btnAddbill.Name = "btnAddbill";
             this.btnAddbill.Size = new System.Drawing.Size(36, 45);
             this.btnAddbill.TabIndex = 28;

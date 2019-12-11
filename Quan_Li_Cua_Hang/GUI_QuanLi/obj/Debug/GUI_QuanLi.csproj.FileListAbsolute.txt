@@ -72,3 +72,6 @@ D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDoanhThu.resources
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.QL_UserControl.resources
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.NV_UserControl.resources
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.NhanVien_Nuoc.resources
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.QuanLy_Nuoc.resources
+D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.TestForm.resources

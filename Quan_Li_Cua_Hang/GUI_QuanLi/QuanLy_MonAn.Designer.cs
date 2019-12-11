@@ -37,13 +37,14 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tbxID = new System.Windows.Forms.TextBox();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnPic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.tbxID = new System.Windows.Forms.TextBox();
             this.picture = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -125,33 +126,6 @@
             this.panel2.Size = new System.Drawing.Size(158, 51);
             this.panel2.TabIndex = 11;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnEdit);
-            this.panel4.Location = new System.Drawing.Point(48, 196);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(42, 51);
-            this.panel4.TabIndex = 12;
-            // 
-            // tbxID
-            // 
-            this.tbxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxID.Location = new System.Drawing.Point(108, 3);
-            this.tbxID.Name = "tbxID";
-            this.tbxID.Size = new System.Drawing.Size(21, 13);
-            this.tbxID.TabIndex = 13;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(3, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(36, 45);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
             // btnPic
             // 
             this.btnPic.BackColor = System.Drawing.SystemColors.Window;
@@ -164,6 +138,7 @@
             this.btnPic.Size = new System.Drawing.Size(50, 49);
             this.btnPic.TabIndex = 5;
             this.btnPic.UseVisualStyleBackColor = false;
+            this.btnPic.Click += new System.EventHandler(this.BtnPic_Click);
             // 
             // btnSave
             // 
@@ -175,6 +150,7 @@
             this.btnSave.Size = new System.Drawing.Size(45, 48);
             this.btnSave.TabIndex = 7;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnDel
             // 
@@ -186,6 +162,35 @@
             this.btnDel.Size = new System.Drawing.Size(47, 49);
             this.btnDel.TabIndex = 6;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnEdit);
+            this.panel4.Location = new System.Drawing.Point(48, 196);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(42, 51);
+            this.panel4.TabIndex = 12;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(3, 3);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(36, 45);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // tbxID
+            // 
+            this.tbxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxID.Location = new System.Drawing.Point(108, 3);
+            this.tbxID.Name = "tbxID";
+            this.tbxID.Size = new System.Drawing.Size(21, 13);
+            this.tbxID.TabIndex = 13;
             // 
             // picture
             // 
@@ -194,6 +199,10 @@
             this.picture.Size = new System.Drawing.Size(240, 166);
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // QL_UserControl
             // 
@@ -215,6 +224,7 @@
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Name = "QL_UserControl";
             this.Size = new System.Drawing.Size(250, 250);
+            this.Load += new System.EventHandler(this.QL_UserControl_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
@@ -240,5 +250,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox tbxID;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
