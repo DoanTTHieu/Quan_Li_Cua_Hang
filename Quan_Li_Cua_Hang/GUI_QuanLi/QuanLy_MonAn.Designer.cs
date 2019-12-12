@@ -67,6 +67,7 @@
             this.tbxTen.Name = "tbxTen";
             this.tbxTen.Size = new System.Drawing.Size(71, 15);
             this.tbxTen.TabIndex = 0;
+            this.tbxTen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextboxName_Click);
             // 
             // tbxGia
             // 
@@ -76,6 +77,8 @@
             this.tbxGia.Name = "tbxGia";
             this.tbxGia.Size = new System.Drawing.Size(60, 15);
             this.tbxGia.TabIndex = 3;
+            this.tbxGia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextboxGia_CLick);
+            this.tbxGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxGia_KeyPress);
             // 
             // panel3
             // 
@@ -191,6 +194,7 @@
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(21, 13);
             this.tbxID.TabIndex = 13;
+            this.tbxID.Visible = false;
             // 
             // picture
             // 
@@ -224,7 +228,6 @@
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Name = "QL_UserControl";
             this.Size = new System.Drawing.Size(250, 250);
-            this.Load += new System.EventHandler(this.QL_UserControl_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();

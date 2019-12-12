@@ -95,6 +95,7 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="MD.cs" />
     <Compile Include="NhanVien_MonAn.cs">
       <SubType>UserControl</SubType>
     </Compile>

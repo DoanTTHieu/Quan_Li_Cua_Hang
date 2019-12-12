@@ -92,7 +92,10 @@ namespace GUI_QuanLi
             }
         }
 
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

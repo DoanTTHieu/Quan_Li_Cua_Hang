@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GUI_QuanLi
+namespace WindowsFormsApp1
 {
-    public partial class TestForm : Form
+    public partial class Form1 : Form
     {
-        public TestForm()
+        public Form1()
         {
             InitializeComponent();
-            MD.StartService();
-        }
-
-        private void TestForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

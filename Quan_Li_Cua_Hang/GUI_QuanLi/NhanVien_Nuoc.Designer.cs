@@ -80,6 +80,7 @@
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(21, 13);
             this.tbxID.TabIndex = 37;
+            this.tbxID.Visible = false;
             // 
             // label1
             // 

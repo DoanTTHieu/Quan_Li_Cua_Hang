@@ -47,10 +47,11 @@ namespace GUI_QuanLi
             this.UserName.Depth = 0;
             this.UserName.Font = new System.Drawing.Font("Roboto", 11F);
             this.UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.UserName.Location = new System.Drawing.Point(197, 272);
+            this.UserName.Location = new System.Drawing.Point(131, 177);
+            this.UserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UserName.MouseState = MaterialSkin.MouseState.HOVER;
             this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(111, 27);
+            this.UserName.Size = new System.Drawing.Size(77, 19);
             this.UserName.TabIndex = 0;
             this.UserName.Text = "Username";
             // 
@@ -58,7 +59,8 @@ namespace GUI_QuanLi
             // 
             this.tb_UserName.Depth = 0;
             this.tb_UserName.Hint = "";
-            this.tb_UserName.Location = new System.Drawing.Point(202, 313);
+            this.tb_UserName.Location = new System.Drawing.Point(135, 203);
+            this.tb_UserName.Margin = new System.Windows.Forms.Padding(2);
             this.tb_UserName.MaxLength = 32767;
             this.tb_UserName.MouseState = MaterialSkin.MouseState.HOVER;
             this.tb_UserName.Name = "tb_UserName";
@@ -66,7 +68,7 @@ namespace GUI_QuanLi
             this.tb_UserName.SelectedText = "";
             this.tb_UserName.SelectionLength = 0;
             this.tb_UserName.SelectionStart = 0;
-            this.tb_UserName.Size = new System.Drawing.Size(350, 32);
+            this.tb_UserName.Size = new System.Drawing.Size(233, 23);
             this.tb_UserName.TabIndex = 1;
             this.tb_UserName.TabStop = false;
             this.tb_UserName.UseSystemPasswordChar = false;
@@ -78,10 +80,11 @@ namespace GUI_QuanLi
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(199, 357);
+            this.materialLabel2.Location = new System.Drawing.Point(133, 232);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(109, 27);
+            this.materialLabel2.Size = new System.Drawing.Size(75, 19);
             this.materialLabel2.TabIndex = 2;
             this.materialLabel2.Text = "Password";
             // 
@@ -89,7 +92,8 @@ namespace GUI_QuanLi
             // 
             this.tb_Password.Depth = 0;
             this.tb_Password.Hint = "";
-            this.tb_Password.Location = new System.Drawing.Point(202, 397);
+            this.tb_Password.Location = new System.Drawing.Point(135, 258);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Password.MaxLength = 32767;
             this.tb_Password.MouseState = MaterialSkin.MouseState.HOVER;
             this.tb_Password.Name = "tb_Password";
@@ -97,7 +101,7 @@ namespace GUI_QuanLi
             this.tb_Password.SelectedText = "";
             this.tb_Password.SelectionLength = 0;
             this.tb_Password.SelectionStart = 0;
-            this.tb_Password.Size = new System.Drawing.Size(350, 32);
+            this.tb_Password.Size = new System.Drawing.Size(233, 23);
             this.tb_Password.TabIndex = 3;
             this.tb_Password.TabStop = false;
             this.tb_Password.UseSystemPasswordChar = false;
@@ -109,10 +113,11 @@ namespace GUI_QuanLi
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(156, 588);
+            this.materialLabel1.Location = new System.Drawing.Point(104, 382);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(183, 27);
+            this.materialLabel1.Size = new System.Drawing.Size(126, 19);
             this.materialLabel1.TabIndex = 6;
             this.materialLabel1.Text = "New to Manager?";
             // 
@@ -124,11 +129,12 @@ namespace GUI_QuanLi
             this.btn_DangNhap.Depth = 0;
             this.btn_DangNhap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_DangNhap.Icon = null;
-            this.btn_DangNhap.Location = new System.Drawing.Point(260, 502);
+            this.btn_DangNhap.Location = new System.Drawing.Point(173, 326);
+            this.btn_DangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DangNhap.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Primary = true;
-            this.btn_DangNhap.Size = new System.Drawing.Size(88, 36);
+            this.btn_DangNhap.Size = new System.Drawing.Size(64, 36);
             this.btn_DangNhap.TabIndex = 8;
             this.btn_DangNhap.Text = "LOG IN";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
@@ -138,9 +144,10 @@ namespace GUI_QuanLi
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI_QuanLi.Properties.Resources.user2;
-            this.pictureBox1.Location = new System.Drawing.Point(239, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(159, 70);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -154,9 +161,10 @@ namespace GUI_QuanLi
             this.btn_TaoTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TaoTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btn_TaoTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
-            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(344, 584);
+            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(229, 380);
+            this.btn_TaoTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TaoTaiKhoan.Name = "btn_TaoTaiKhoan";
-            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(207, 36);
+            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(138, 23);
             this.btn_TaoTaiKhoan.TabIndex = 9;
             this.btn_TaoTaiKhoan.Text = "Create an account.";
             this.btn_TaoTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -166,9 +174,9 @@ namespace GUI_QuanLi
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 650);
+            this.ClientSize = new System.Drawing.Size(447, 422);
             this.Controls.Add(this.btn_TaoTaiKhoan);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.materialLabel1);
@@ -177,9 +185,11 @@ namespace GUI_QuanLi
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.tb_UserName);
             this.Controls.Add(this.UserName);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign in";
+            this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

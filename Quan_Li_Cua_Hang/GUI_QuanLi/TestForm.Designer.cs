@@ -30,6 +30,7 @@
         {
             this.qL_UserControl1 = new GUI_QuanLi.QL_UserControl();
             this.quanLy_Nuoc1 = new GUI_QuanLi.QuanLy_Nuoc();
+            this.quanLy_Nuoc2 = new GUI_QuanLi.QuanLy_Nuoc();
             this.SuspendLayout();
             // 
             // qL_UserControl1
@@ -51,15 +52,26 @@
             this.quanLy_Nuoc1.Size = new System.Drawing.Size(250, 300);
             this.quanLy_Nuoc1.TabIndex = 1;
             // 
+            // quanLy_Nuoc2
+            // 
+            this.quanLy_Nuoc2.BackColor = System.Drawing.SystemColors.Window;
+            this.quanLy_Nuoc2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.quanLy_Nuoc2.Location = new System.Drawing.Point(512, 0);
+            this.quanLy_Nuoc2.Name = "quanLy_Nuoc2";
+            this.quanLy_Nuoc2.Size = new System.Drawing.Size(250, 300);
+            this.quanLy_Nuoc2.TabIndex = 2;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(820, 450);
+            this.Controls.Add(this.quanLy_Nuoc2);
             this.Controls.Add(this.quanLy_Nuoc1);
             this.Controls.Add(this.qL_UserControl1);
             this.Name = "TestForm";
             this.Text = "TestForm";
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -68,5 +80,6 @@
 
         private QL_UserControl qL_UserControl1;
         private QuanLy_Nuoc quanLy_Nuoc1;
+        private QuanLy_Nuoc quanLy_Nuoc2;
     }
 }

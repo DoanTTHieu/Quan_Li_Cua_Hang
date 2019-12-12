@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLy_Nuoc));
             this.tbxID = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnPic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(21, 13);
             this.tbxID.TabIndex = 24;
+            this.tbxID.Visible = false;
             // 
             // panel2
             // 
@@ -67,18 +68,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(157, 51);
             this.panel2.TabIndex = 22;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(5, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(36, 45);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnPic
             // 
@@ -118,6 +107,18 @@
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(5, 2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(36, 45);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -156,6 +157,8 @@
             this.tbxGia.Name = "tbxGia";
             this.tbxGia.Size = new System.Drawing.Size(60, 15);
             this.tbxGia.TabIndex = 17;
+            this.tbxGia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextboxGia_CLick);
+            this.tbxGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbxGia_KeyPress);
             // 
             // panel3
             // 
@@ -174,6 +177,7 @@
             this.tbxTen.Name = "tbxTen";
             this.tbxTen.Size = new System.Drawing.Size(71, 15);
             this.tbxTen.TabIndex = 14;
+            this.tbxTen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextboxName_Click);
             // 
             // panel1
             // 
@@ -223,7 +227,6 @@
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Name = "QuanLy_Nuoc";
             this.Size = new System.Drawing.Size(250, 300);
-            this.Load += new System.EventHandler(this.QuanLy_Nuoc_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.panel4.ResumeLayout(false);
