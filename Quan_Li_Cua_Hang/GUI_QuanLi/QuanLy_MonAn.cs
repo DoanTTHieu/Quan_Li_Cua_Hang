@@ -19,10 +19,6 @@ namespace GUI_QuanLi
         {
             InitializeComponent();
             btnDel.Tag = this;
-            panel2.Enabled = false;
-            panel2.Visible = false;
-            tbxTen.Enabled = false;
-            tbxGia.Enabled = false;
         }
 
         public DTO_MonAn Data { get; set; }
@@ -116,7 +112,7 @@ namespace GUI_QuanLi
         public void UpdateButtonClick()
         {
             Data.Tenmon = tbxTen.Text;
-            Data.Gia = Convert.ToInt32(tbxGia.Text);
+            Data.Gia = Convert.ToInt64(tbxGia.Text);
             Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
 
             //MD.Instance.AddInfo(Data); -> Thay bang update
@@ -130,7 +126,7 @@ namespace GUI_QuanLi
             {
                 Data = new DTO_MonAn();
                 Data.Tenmon = tbxTen.Text;
-                Data.Gia = Convert.ToInt32(tbxGia.Text);
+                Data.Gia = Convert.ToInt64(tbxGia.Text);
                 Data.Phanloai = (int) PhanLoai;
                 Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
 
@@ -178,6 +174,11 @@ namespace GUI_QuanLi
             if (Data == null) return;
             SaveModePrepare();
             SetPic(Data.Hinhanh.ToString());
+        }
+
+        private void btnAddbill_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

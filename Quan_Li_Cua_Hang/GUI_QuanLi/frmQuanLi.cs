@@ -32,6 +32,14 @@ namespace GUI_QuanLi
             {
                 QuanLy_MonAn element = new QuanLy_MonAn(monAn);
                 this.fLoutMonAn.Controls.Add(element);
+                element.panel5.Visible = false;
+                element.panel3.Visible = false;
+                element.panel2.Enabled = false;
+                element.panel2.Visible = false;
+                element.tbxTen.Enabled = false;
+                element.tbxGia.Enabled = false;
+                element.panel4.Visible = true;
+                element.panel4.Enabled = true;
                 element.Size = new Size(250, 250);
                 element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
             }
@@ -44,6 +52,14 @@ namespace GUI_QuanLi
             {
                 QuanLy_MonAn element = new QuanLy_MonAn(monAn);
                 this.fLoutMonNuoc.Controls.Add(element);
+                element.panel5.Visible = false;
+                element.panel3.Visible = false;
+                element.panel2.Enabled = false;
+                element.panel2.Visible = false;
+                element.tbxTen.Enabled = false;
+                element.tbxGia.Enabled = false;
+                element.panel4.Visible = true;
+                element.panel4.Enabled = true;
                 element.Size = new Size(250, 300);
                 element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o,e,fLoutMonNuoc));
             }
@@ -90,6 +106,14 @@ namespace GUI_QuanLi
             QuanLy_MonAn element = new QuanLy_MonAn(null);
             this.fLoutMonAn.Controls.Add(element);
             this.fLoutMonAn.Controls.SetChildIndex(element, 1);
+            element.panel5.Visible = false;
+            element.panel3.Visible = false;
+            element.panel2.Enabled = false;
+            element.panel2.Visible = false;
+            element.tbxTen.Enabled = false;
+            element.tbxGia.Enabled = false;
+            element.panel4.Visible = true;
+            element.panel4.Enabled = true;
             element.Size = new Size(250, 250);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonAn));
         }
@@ -99,6 +123,14 @@ namespace GUI_QuanLi
             QuanLy_MonAn element = new QuanLy_MonAn(null) { PhanLoai = PhanLoai.MonNuoc };
             this.fLoutMonNuoc.Controls.Add(element);
             this.fLoutMonNuoc.Controls.SetChildIndex(element, 1);
+            element.panel5.Visible = false;
+            element.panel3.Visible = false;
+            element.panel2.Enabled = false;
+            element.panel2.Visible = false;
+            element.tbxTen.Enabled = false;
+            element.tbxGia.Enabled = false;
+            element.panel4.Visible = true;
+            element.panel4.Enabled = true;
             element.Size = new Size(250, 300);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonNuoc));
         }

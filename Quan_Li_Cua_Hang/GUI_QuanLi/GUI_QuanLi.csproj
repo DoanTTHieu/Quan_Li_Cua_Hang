@@ -96,18 +96,6 @@
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="MD.cs" />
-    <Compile Include="NhanVien_MonAn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NhanVien_MonAn.Designer.cs">
-      <DependentUpon>NhanVien_MonAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NhanVien_Nuoc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NhanVien_Nuoc.Designer.cs">
-      <DependentUpon>NhanVien_Nuoc.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLy_MonAn.cs">
@@ -138,12 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien_MonAn.resx">
-      <DependentUpon>NhanVien_MonAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhanVien_Nuoc.resx">
-      <DependentUpon>NhanVien_Nuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

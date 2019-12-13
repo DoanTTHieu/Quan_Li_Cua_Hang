@@ -43,11 +43,18 @@
             this.tbxTen = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.tbSL = new System.Windows.Forms.TextBox();
+            this.lbSL = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAddbill = new System.Windows.Forms.Button();
             this.picture = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +131,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
             // 
             // panel1
             // 
@@ -194,6 +202,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Controls.Add(this.panel2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -201,6 +211,59 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(460, 51);
             this.panel6.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.tbSL);
+            this.panel5.Controls.Add(this.lbSL);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(218, 52);
+            this.panel5.TabIndex = 14;
+            // 
+            // tbSL
+            // 
+            this.tbSL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSL.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbSL.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSL.Location = new System.Drawing.Point(68, 5);
+            this.tbSL.Name = "tbSL";
+            this.tbSL.Size = new System.Drawing.Size(30, 15);
+            this.tbSL.TabIndex = 16;
+            // 
+            // lbSL
+            // 
+            this.lbSL.AutoSize = true;
+            this.lbSL.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbSL.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSL.Location = new System.Drawing.Point(3, 5);
+            this.lbSL.Name = "lbSL";
+            this.lbSL.Size = new System.Drawing.Size(65, 15);
+            this.lbSL.TabIndex = 17;
+            this.lbSL.Text = "Số Lượng:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAddbill);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(218, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(42, 51);
+            this.panel3.TabIndex = 13;
+            // 
+            // btnAddbill
+            // 
+            this.btnAddbill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddbill.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAddbill.Image = ((System.Drawing.Image)(resources.GetObject("btnAddbill.Image")));
+            this.btnAddbill.Location = new System.Drawing.Point(3, 3);
+            this.btnAddbill.Name = "btnAddbill";
+            this.btnAddbill.Size = new System.Drawing.Size(36, 45);
+            this.btnAddbill.TabIndex = 29;
+            this.btnAddbill.UseVisualStyleBackColor = true;
+            this.btnAddbill.Click += new System.EventHandler(this.btnAddbill_Click);
             // 
             // picture
             // 
@@ -233,6 +296,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
 
@@ -244,16 +310,21 @@
         private System.Windows.Forms.Button btnBack;
         public System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox tbxGia;
-        private System.Windows.Forms.TextBox tbxTen;
+        public System.Windows.Forms.TextBox tbxGia;
+        public System.Windows.Forms.TextBox tbxTen;
         private System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnAddbill;
+        public System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox tbSL;
+        private System.Windows.Forms.Label lbSL;
     }
 }

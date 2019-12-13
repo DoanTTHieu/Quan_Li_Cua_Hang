@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_QuanLi;
+using BUS_QuanLi;
 
 namespace GUI_QuanLi
 {
     public partial class frmNhanVien : MaterialForm
     {
+        BUS_HoaDon hd = new BUS_HoaDon();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -34,6 +37,13 @@ namespace GUI_QuanLi
                 this.Close();
             }
             return;
+        }
+
+        private void btn_ThemHoaDon_Click(object sender, EventArgs e)
+        {
+            hd.TaoHoaDon();
+            frmCTHD frm = new frmCTHD(0);
+            frm.ShowDialog();
         }
     }
 }

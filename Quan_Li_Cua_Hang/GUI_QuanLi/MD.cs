@@ -14,7 +14,8 @@ namespace GUI_QuanLi
     public class MD
     {
         public static MD Instance { get; private set; }
-        String connectStr = @"Data Source=localhost;Initial Catalog=master;Integrated Security=True";
+        //String connectStr = @"Data Source=localhost;Initial Catalog=master;Integrated Security=True";
+        String connectStr = @"Data Source = COMPUTER; Initial Catalog = QLCH; Integrated Security = True";        
         SqlConnection NganConnection;
         private void Dtb()
         {

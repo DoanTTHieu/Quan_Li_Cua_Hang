@@ -129,6 +129,7 @@
             // tb_IDHD
             // 
             this.tb_IDHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tb_IDHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_IDHD.Location = new System.Drawing.Point(276, 10);
             this.tb_IDHD.Name = "tb_IDHD";
             this.tb_IDHD.Size = new System.Drawing.Size(21, 13);
@@ -165,6 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btn_XacNhan);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
@@ -185,19 +187,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lvCTHD;
+        public System.Windows.Forms.ListView lvCTHD;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.TextBox tb_TongTien;
-        private System.Windows.Forms.Button btn_ThanhToan;
-        private System.Windows.Forms.Button btn_ChonMon;
+        public System.Windows.Forms.TextBox tb_TongTien;
+        public System.Windows.Forms.Button btn_ThanhToan;
+        public System.Windows.Forms.Button btn_ChonMon;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_SoBan;
-        private System.Windows.Forms.TextBox tb_IDHD;
+        public System.Windows.Forms.TextBox tb_SoBan;
+        public System.Windows.Forms.TextBox tb_IDHD;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_XacNhan;
+        public System.Windows.Forms.Button btn_XacNhan;
     }
 }

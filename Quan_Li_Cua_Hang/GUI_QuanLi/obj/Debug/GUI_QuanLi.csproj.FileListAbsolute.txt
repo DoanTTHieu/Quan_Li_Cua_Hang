@@ -73,3 +73,28 @@ D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.NV_UserControl.resources
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.NhanVien_Nuoc.resources
 D:\Đại học\LTTQ\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.QuanLy_MonAn.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\GUI_QuanLi.exe.config
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\GUI_QuanLi.exe
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\GUI_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\BUS_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DTO_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\MaterialSkin.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DAL_QuanLi.dll
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\BUS_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DTO_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\bin\Debug\DAL_QuanLi.pdb
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.csprojAssemblyReference.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmCTHD.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDangNhap.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmDoanhThu.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmNhanVien.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmQuanLi.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.frmTaoTaiKhoan.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.HoaDon.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.Properties.Resources.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.QuanLy_MonAn.resources
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.csproj.GenerateResource.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.csproj.CoreCompileInputs.cache
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.csproj.CopyComplete
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.exe
+E:\Đồ án\Quan_Li_Cua_Hang\Quan_Li_Cua_Hang\GUI_QuanLi\obj\Debug\GUI_QuanLi.pdb
