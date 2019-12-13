@@ -1,4 +1,6 @@
-﻿using MaterialSkin.Controls;
+﻿using DTO_QuanLi;
+using GUI_QuanLi.Utils;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,50 @@ namespace GUI_QuanLi
         public frmQuanLi()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.fLoutMonAn.AutoScroll = true;
+            this.fLoutMonNuoc.AutoScroll = true;
+            LoadMonAn();
+            LoadMonNuoc();
+        }
+
+        private void LoadMonAn()
+        {
+            MD.StartService();
+            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonAn))
+            {
+                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+                this.fLoutMonAn.Controls.Add(element);
+                element.Size = new Size(250, 250);
+                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
+            }
+        }
+
+        private void LoadMonNuoc()
+        {
+            MD.StartService();
+            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonNuoc))
+            {
+                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+                this.fLoutMonNuoc.Controls.Add(element);
+                element.Size = new Size(250, 300);
+                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o,e,fLoutMonNuoc));
+            }
+        }
+
+        private void RemoveElement(object sender, EventArgs ev, FlowLayoutPanel container)
+        {
+            try
+            {
+                if (!(sender is Button)) return;
+                Button btn = sender as Button;
+
+                if (!(btn.Tag is QuanLy_MonAn)) return;
+                container.Controls.Remove(btn.Tag as QuanLy_MonAn);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void Btn_DangXuat_Click(object sender, EventArgs e)
@@ -41,20 +87,20 @@ namespace GUI_QuanLi
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Point startpoint = new Point(1, 0);
-            QL_UserControl monan = new QL_UserControl();
-            monan.Location = new Point(startpoint.X + 250, startpoint.Y);
-            //<tên giao diện>.Controls.Add(monan)
-            startpoint.X += 250;
+            QuanLy_MonAn element = new QuanLy_MonAn(null);
+            this.fLoutMonAn.Controls.Add(element);
+            this.fLoutMonAn.Controls.SetChildIndex(element, 1);
+            element.Size = new Size(250, 250);
+            element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonAn));
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Point startpoint = new Point(1, 20);
-            QuanLy_Nuoc nuoc = new QuanLy_Nuoc();
-            nuoc.Location = new Point(startpoint.X + 250, startpoint.Y);
-            //<tên giao diện>.Controls.Add(monan)
-            startpoint.X += 250;
+            QuanLy_MonAn element = new QuanLy_MonAn(null) { PhanLoai = PhanLoai.MonNuoc };
+            this.fLoutMonNuoc.Controls.Add(element);
+            this.fLoutMonNuoc.Controls.SetChildIndex(element, 1);
+            element.Size = new Size(250, 300);
+            element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonNuoc));
         }
     }
 }

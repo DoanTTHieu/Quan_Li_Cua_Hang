@@ -116,18 +116,8 @@
     <Compile Include="QuanLy_MonAn.Designer.cs">
       <DependentUpon>QuanLy_MonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy_Nuoc.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="QuanLy_Nuoc.Designer.cs">
-      <DependentUpon>QuanLy_Nuoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Utils\PhanLoai.cs" />
+    <Compile Include="Utils\ResourceUtil.cs" />
     <EmbeddedResource Include="frmCTHD.resx">
       <DependentUpon>frmCTHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,12 +158,6 @@
     <EmbeddedResource Include="QuanLy_MonAn.resx">
       <DependentUpon>QuanLy_MonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLy_Nuoc.resx">
-      <DependentUpon>QuanLy_Nuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,6 +187,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_50px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

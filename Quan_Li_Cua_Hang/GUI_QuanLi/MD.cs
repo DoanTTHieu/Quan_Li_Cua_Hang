@@ -6,19 +6,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using DTO_QuanLi;
+using GUI_QuanLi.Utils;
 
 namespace GUI_QuanLi
 {
-    public class MonAn
-    {
-        public string mamon;
-        public string tenmon;
-        public int gia;
-        public int phanloai;
-        public string hinhanh;
-    }
-
-
     public class MD
     {
         public static MD Instance { get; private set; }
@@ -39,16 +31,16 @@ namespace GUI_QuanLi
         }
 
 
-        public void AddInfo(MonAn ma)
+        public void AddInfo(DTO_MonAn ma)
         {
             try
             {
                 SqlCommand myCmd = NganConnection.CreateCommand();
                 myCmd.CommandText = "insert into QLCH.dbo.MONAN (tenmon, gia, phanloai, hinhanh) values (@tenmon, @gia, @phanloai, @hinhanh)";
-                myCmd.Parameters.AddWithValue("@tenmon", ma.tenmon);
-                myCmd.Parameters.AddWithValue("@gia", ma.gia);
-                myCmd.Parameters.AddWithValue("@phanloai", ma.phanloai);
-                myCmd.Parameters.AddWithValue("@hinhanh", ma.hinhanh);
+                myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
+                myCmd.Parameters.AddWithValue("@gia", ma.Gia);
+                myCmd.Parameters.AddWithValue("@phanloai", ma.Phanloai);
+                myCmd.Parameters.AddWithValue("@hinhanh", ma.Hinhanh);
                 myCmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -81,29 +73,34 @@ namespace GUI_QuanLi
             }
 
         }
-        public List<MonAn> GetAllRecords()
+        public List<DTO_MonAn> GetAllRecords(PhanLoai phanLoai)
         {
-            List<MonAn> result = new List<MonAn>();
+            List<DTO_MonAn> result = new List<DTO_MonAn>();
             SqlDataReader reader = null;
 
             try
             {
                 SqlCommand myCmd = NganConnection.CreateCommand();
-                myCmd.CommandText = "select * from QLSV.dbo.SV";
-
+                myCmd.CommandText = "select * from QLCH.dbo.MONAN Where phanloai = @phanloai";
+                myCmd.Parameters.AddWithValue("@phanloai", (int)phanLoai);
                 reader = myCmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    MonAn monan = new MonAn()
+                    try
                     {
-                        mamon = reader["monan"] as string,
-                        tenmon = reader["tenmon"] as string,
-                        gia = (int)reader["gia"],
-                        phanloai = (int)reader["gia"],
-                        hinhanh = reader["hinhanh"] as string
-                    };
+                        DTO_MonAn monan = new DTO_MonAn();
 
-                    result.Add(monan);
+                        monan.Mamon = (int)reader["mamon"];
+                        monan.Tenmon = reader["tenmon"] as string;
+                        monan.Gia = float.Parse(reader["gia"].ToString());
+                        monan.Phanloai = (int)reader["phanloai"];
+                        monan.Hinhanh = reader["hinhanh"] as string;
+
+                        result.Add(monan);
+                    } catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
                 }
             }
             catch (Exception e)

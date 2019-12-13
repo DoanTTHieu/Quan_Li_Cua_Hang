@@ -7,29 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_QuanLi;
+using System.IO;
+using GUI_QuanLi.Utils;
 
 namespace GUI_QuanLi
 {
-    public partial class QL_UserControl : UserControl
+    public partial class QuanLy_MonAn : UserControl
     {
-        public static MD Instance { get; private set; }
-        public QL_UserControl()
+        public QuanLy_MonAn()
         {
             InitializeComponent();
+            btnDel.Tag = this;
             panel2.Enabled = false;
             panel2.Visible = false;
             tbxTen.Enabled = false;
             tbxGia.Enabled = false;
         }
 
+        public DTO_MonAn Data { get; set; }
+
+        public PhanLoai PhanLoai { get; set; } = PhanLoai.MonAn;
+
+        public QuanLy_MonAn(DTO_MonAn data) : this()
+        {
+            if (data != null)
+            {
+                Data = data;
+                tbxGia.Text = data.Gia.ToString();
+                tbxTen.Text = data.Tenmon.ToString();
+                PhanLoai = (PhanLoai)data.Phanloai;
+                SetPic(data.Hinhanh.ToString());
+            } else
+            {
+                ToggleInfo();
+                PrepareEditMode();
+            }
+        }
+
         public void ToggleInfo()
         {
             tbxTen.Text = "";
             tbxGia.Text = "";
-            picture.ImageLocation = "";
+            picture.BackgroundImage = Properties.Resources.icons8_add_50px_1;
+            picture.BackgroundImageLayout = ImageLayout.Center;
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            PrepareEditMode();
+        }
+
+        private void SetPic(String imgPath)
+        {
+            picture.BackgroundImage = new Bitmap(imgPath);
+            picture.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void PrepareEditMode()
         {
             panel2.Enabled = true;
             panel2.Visible = true;
@@ -37,19 +72,32 @@ namespace GUI_QuanLi
             panel4.Visible = false;
             tbxTen.Enabled = true;
             tbxGia.Enabled = true;
+            if (Data == null)
+            {
+                btnBack.Enabled = btnBack.Visible =  false;
+            } else
+            {
+                btnBack.Enabled = btnBack.Visible = true;
+            }
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            SaveButtonClick();
-            
+            if (Data == null)
+            {
+                SaveButtonClick();
+            } else
+            {
+                UpdateButtonClick();
+            }
         }
 
         private void BtnPic_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (!panel2.Visible || !panel2.Enabled) return;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                picture.ImageLocation = openFileDialog1.FileName;
+                SetPic(openFileDialog1.FileName);
             }
         }
 
@@ -57,21 +105,44 @@ namespace GUI_QuanLi
         {
             this.Enabled = false;
             this.Visible = false;
+
+            if (Data != null)
+            {
+                MD.StartService();
+                MD.Instance.DeleteInfo(Data.Mamon);
+            }
+        }
+
+        public void UpdateButtonClick()
+        {
+            Data.Tenmon = tbxTen.Text;
+            Data.Gia = Convert.ToInt32(tbxGia.Text);
+            Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
+
+            //MD.Instance.AddInfo(Data); -> Thay bang update
+
+            SaveModePrepare();
         }
 
         public void SaveButtonClick()
         {
-            MonAn mon = new MonAn();
-            mon.tenmon = tbxTen.Text;
-            mon.gia = Convert.ToInt32(tbxGia.Text);
-            mon.phanloai = 1;
-            mon.hinhanh = openFileDialog1.FileName;
+            try
+            {
+                Data = new DTO_MonAn();
+                Data.Tenmon = tbxTen.Text;
+                Data.Gia = Convert.ToInt32(tbxGia.Text);
+                Data.Phanloai = (int) PhanLoai;
+                Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
 
-            MD.Instance.AddInfo(mon);
+                MD.Instance.AddInfo(Data);
 
-            SaveModePrepare();
-            ToggleInfo();
+                SaveModePrepare();
+            } catch
+            {
+
+            }
         }
+
 
         public void SaveModePrepare()
         {
@@ -100,6 +171,13 @@ namespace GUI_QuanLi
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            if (Data == null) return;
+            SaveModePrepare();
+            SetPic(Data.Hinhanh.ToString());
         }
     }
 }
