@@ -18,14 +18,12 @@ namespace GUI_QuanLi
         BUS_HoaDon hd = new BUS_HoaDon();
         public frmNhanVien()
         {
-            this.DoubleBuffered = true;
             InitializeComponent();
             MaterialSkin.MaterialSkinManager manager = MaterialSkin.MaterialSkinManager.Instance;
             manager.AddFormToManage(this);
             manager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
             manager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Blue300, MaterialSkin.Primary.Blue500, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.LightBlue400, MaterialSkin.TextShade.WHITE);
             loadHoaDon();
-
         }
 
         private void Btn_Thoat_Click(object sender, EventArgs e)
@@ -52,36 +50,39 @@ namespace GUI_QuanLi
         {
             foreach (DataRow row in hd.LayHoaDon().Rows)
             {
-                HoaDon hd = new HoaDon();
-                hd.tb_IDHD.Text = row["mahd"].ToString();
-                hd.tb_SoBan.Text = row["ban"].ToString();
-                hd.tb_TongTien.Text = row["trigia"].ToString();
-                hd.panel4.Visible = false;
-                hd.tb_IDHD.Enabled = false;
-                hd.tb_SoBan.Enabled = false;
-                hd.tb_TongTien.Enabled = false;
-                hd.panel3.Size = new Size(55, 23);
-                hd.panel6.Size = new Size(55, 23);
-                hd.columnHeader1.Width = 145;
-                hd.columnHeader2.Width = 75;
-                hd.columnHeader3.Width = 80;
-                this.flowDSHoaDon.Controls.Add(hd);
-                hd.Size = new Size(300, 450);
-                hd.btn_ThanhToan.Click += Btn_ThanhToan_Click;
+                HoaDon hoadon = new HoaDon();
+                hoadon.tb_IDHD.Text = row["mahd"].ToString();
+                hoadon.tb_SoBan.Text = row["ban"].ToString();
+                hoadon.tb_TongTien.Text = row["trigia"].ToString();
+                hoadon.tb_IDHD.Enabled = false;
+                hoadon.tb_SoBan.Enabled = false;
+                hoadon.tb_TongTien.Enabled = false;
+                this.flowHoaDon.Controls.Add(hoadon);
+                hoadon.Size = new Size(300, 450);
+                hoadon.panel3.Size = new Size(75, 23);
+                hoadon.panel4.Visible = false;
+                hoadon.panel6.Size = new Size(75, 23);
+                hoadon.columnHeader1.Width = 145;
+                hoadon.columnHeader2.Width = 75;
+                hoadon.columnHeader3.Width = 80;
+                hoadon.btn_ChonMon.Click += Btn_ChonMon_Click;
+                hoadon.btn_ThanhToan.Click += Btn_ThanhToan_Click;
             }
         }
 
         private void Btn_ThanhToan_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmNhanVien frm = new frmNhanVien();
             frm.ShowDialog();
             this.Close();
-            //foreach (UserControl item in this.Controls.OfType<HoaDon>())
-            //{
-            //    this.flowDSHoaDon.Controls.Remove(item);
-            //    item.Dispose();
-            //}
-            //loadHoaDon();
+        }
+
+        private void Btn_ChonMon_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            this.Close();
         }
     }
 }

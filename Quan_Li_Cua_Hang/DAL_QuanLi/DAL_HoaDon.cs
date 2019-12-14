@@ -79,5 +79,19 @@ namespace DAL_QuanLi
             cmd.ExecuteNonQuery();
             _conn.Close();
         }
+        public DataTable LayHoaDon()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select mahd,trigia,ban from HOADON where mahd>0 and trangthai = 0 ", _conn);
+            DataTable dtSinhvien = new DataTable();
+            da.Fill(dtSinhvien);
+            return dtSinhvien;
+        }
+        public DataTable LayThongTinHoaDon(int tam)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select trigia,ban from HOADON where mahd='"+tam+"'", _conn);
+            DataTable dtSinhvien = new DataTable();
+            da.Fill(dtSinhvien);
+            return dtSinhvien;
+        }
     }
 }

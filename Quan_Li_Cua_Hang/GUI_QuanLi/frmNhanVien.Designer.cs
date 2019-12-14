@@ -33,12 +33,12 @@
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_ThemHoaDon = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.flowHoaDon = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_ThemHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.flowHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,32 +105,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.btn_ThemHoaDon);
-            this.panel2.Location = new System.Drawing.Point(1, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 584);
-            this.panel2.TabIndex = 2;
-            // 
-            // btn_ThemHoaDon
-            // 
-            this.btn_ThemHoaDon.BackgroundImage = global::GUI_QuanLi.Properties.Resources.plus;
-            this.btn_ThemHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_ThemHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ThemHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
-            this.btn_ThemHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThemHoaDon.Location = new System.Drawing.Point(20, 20);
-            this.btn_ThemHoaDon.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ThemHoaDon.Name = "btn_ThemHoaDon";
-            this.btn_ThemHoaDon.Size = new System.Drawing.Size(300, 450);
-            this.btn_ThemHoaDon.TabIndex = 0;
-            this.btn_ThemHoaDon.UseVisualStyleBackColor = true;
-            this.btn_ThemHoaDon.Click += new System.EventHandler(this.btn_ThemHoaDon_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
@@ -140,14 +114,38 @@
             this.panel3.Size = new System.Drawing.Size(1, 650);
             this.panel3.TabIndex = 1;
             // 
+            // flowHoaDon
+            // 
+            this.flowHoaDon.AutoScroll = true;
+            this.flowHoaDon.Controls.Add(this.btn_ThemHoaDon);
+            this.flowHoaDon.Location = new System.Drawing.Point(4, 65);
+            this.flowHoaDon.Name = "flowHoaDon";
+            this.flowHoaDon.Size = new System.Drawing.Size(998, 581);
+            this.flowHoaDon.TabIndex = 2;
+            // 
+            // btn_ThemHoaDon
+            // 
+            this.btn_ThemHoaDon.BackgroundImage = global::GUI_QuanLi.Properties.Resources.plus;
+            this.btn_ThemHoaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ThemHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ThemHoaDon.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
+            this.btn_ThemHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThemHoaDon.Location = new System.Drawing.Point(4, 4);
+            this.btn_ThemHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ThemHoaDon.Name = "btn_ThemHoaDon";
+            this.btn_ThemHoaDon.Size = new System.Drawing.Size(300, 450);
+            this.btn_ThemHoaDon.TabIndex = 1;
+            this.btn_ThemHoaDon.UseVisualStyleBackColor = true;
+            this.btn_ThemHoaDon.Click += new System.EventHandler(this.btn_ThemHoaDon_Click);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.flowHoaDon);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhanVien";
@@ -156,7 +154,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.flowHoaDon.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -165,10 +163,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Thoat;
-        private System.Windows.Forms.Button btn_ThemHoaDon;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FlowLayoutPanel flowHoaDon;
+        private System.Windows.Forms.Button btn_ThemHoaDon;
     }
 }

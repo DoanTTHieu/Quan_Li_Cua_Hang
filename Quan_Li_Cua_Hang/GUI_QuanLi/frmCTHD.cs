@@ -39,16 +39,16 @@ namespace GUI_QuanLi
                 HoaDon.tb_IDHD.Text = tam.ToString();
                 HoaDon.tb_IDHD.Enabled = false;
                 HoaDon.tb_TongTien.Text = "0";
+                HoaDon.tb_TongTien.Enabled = false;
                 this.panel2.Controls.Add(HoaDon);
                 HoaDon.Size = new Size(300, 450);
-                HoaDon.panel3.Size = new Size(55, 23);
-                HoaDon.panel6.Size = new Size(55, 23);
+                HoaDon.panel4.Size = new Size(75, 23);
                 HoaDon.panel6.Visible = false;
                 HoaDon.panel3.Visible = false;
                 HoaDon.columnHeader1.Width = 145;
                 HoaDon.columnHeader2.Width = 75;
                 HoaDon.columnHeader3.Width = 80;
-                HoaDon.btn_XacNhan.Click += Btn_XacNhan_Click;              
+                HoaDon.btn_XacNhan.Click += Btn_XacNhan_Click;
             }
             else
             {
@@ -65,8 +65,7 @@ namespace GUI_QuanLi
                 HoaDon.tb_TongTien.Enabled = false;
                 this.panel2.Controls.Add(HoaDon);
                 HoaDon.Size = new Size(300, 450);
-                HoaDon.panel3.Size = new Size(55, 23);
-                HoaDon.panel6.Size = new Size(55, 23);
+                HoaDon.panel4.Size = new Size(75, 23);
                 HoaDon.panel6.Visible = false;
                 HoaDon.panel3.Visible = false;
                 HoaDon.columnHeader1.Width = 145;

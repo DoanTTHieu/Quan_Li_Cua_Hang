@@ -35,5 +35,14 @@ namespace BUS_QuanLi
         {
             hd.CapNhatHoaDon(tien,tam);
         }
+        public DataTable LayHoaDon()
+        {
+            return hd.LayHoaDon();
+        }
+        public DataTable LayThongTinHoaDon(int tam)
+        {
+            return hd.LayThongTinHoaDon(tam);
+        }
+
     }
 }
