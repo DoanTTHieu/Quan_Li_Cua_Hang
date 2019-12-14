@@ -18,6 +18,7 @@ namespace GUI_QuanLi
     {
         HoaDon HoaDon = new HoaDon();
         BUS_HoaDon hd = new BUS_HoaDon();
+        float tien = 0;
         public frmCTHD(int x)
         {
             InitializeComponent();
@@ -34,16 +35,62 @@ namespace GUI_QuanLi
             tam = hd.LayIDHoaDon();
             if (x == 0)
             {                
-                HoaDon.Dock = DockStyle.Right;
+                HoaDon.Dock = DockStyle.Right;                
                 HoaDon.tb_IDHD.Text = tam.ToString();
+                HoaDon.tb_IDHD.Enabled = false;
+                HoaDon.tb_TongTien.Text = "0";
                 this.panel2.Controls.Add(HoaDon);
+                HoaDon.Size = new Size(300, 450);
+                HoaDon.panel3.Size = new Size(55, 23);
+                HoaDon.panel6.Size = new Size(55, 23);
+                HoaDon.panel6.Visible = false;
+                HoaDon.panel3.Visible = false;
+                HoaDon.columnHeader1.Width = 145;
+                HoaDon.columnHeader2.Width = 75;
+                HoaDon.columnHeader3.Width = 80;
+                HoaDon.btn_XacNhan.Click += Btn_XacNhan_Click;              
             }
             else
             {
+                foreach (DataRow row in hd.LayThongTinHoaDon(x).Rows)
+                {
+                    HoaDon.tb_SoBan.Text = row["ban"].ToString();
+                    HoaDon.tb_TongTien.Text = row["trigia"].ToString();
+                    tien = float.Parse(HoaDon.tb_TongTien.Text);
+                }
+                this.btn_Huy.Visible = false;
                 HoaDon.Dock = DockStyle.Right;
+                HoaDon.tb_IDHD.Text = x.ToString();
+                HoaDon.tb_IDHD.Enabled = false;
+                HoaDon.tb_TongTien.Enabled = false;
                 this.panel2.Controls.Add(HoaDon);
+                HoaDon.Size = new Size(300, 450);
+                HoaDon.panel3.Size = new Size(55, 23);
+                HoaDon.panel6.Size = new Size(55, 23);
+                HoaDon.panel6.Visible = false;
+                HoaDon.panel3.Visible = false;
+                HoaDon.columnHeader1.Width = 145;
+                HoaDon.columnHeader2.Width = 75;
+                HoaDon.columnHeader3.Width = 80;
+                HoaDon.btn_XacNhan.Click += Btn_XacNhan_Click;
             }
         }
+
+        private void Btn_XacNhan_Click(object sender, EventArgs e)
+        {
+            if (tien == 0)
+            {
+
+            }
+            else
+            {
+                this.Hide();
+                frmNhanVien frm = new frmNhanVien();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
+
         private void LoadMonAn()
         {
             MD.StartService();
