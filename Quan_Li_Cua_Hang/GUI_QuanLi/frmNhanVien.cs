@@ -51,13 +51,14 @@ namespace GUI_QuanLi
             foreach (DataRow row in hd.LayHoaDon().Rows)
             {
                 HoaDon hoadon = new HoaDon();
+                hoadon.Tag = row["mahd"].ToString();
                 hoadon.tb_IDHD.Text = row["mahd"].ToString();
                 hoadon.tb_SoBan.Text = row["ban"].ToString();
                 hoadon.tb_TongTien.Text = row["trigia"].ToString();
                 hoadon.tb_IDHD.Enabled = false;
                 hoadon.tb_SoBan.Enabled = false;
                 hoadon.tb_TongTien.Enabled = false;
-                this.flowHoaDon.Controls.Add(hoadon);
+                this.flowHoaDon.Controls.Add(hoadon);               
                 hoadon.Size = new Size(300, 450);
                 hoadon.panel3.Size = new Size(75, 23);
                 hoadon.panel4.Visible = false;
@@ -65,9 +66,16 @@ namespace GUI_QuanLi
                 hoadon.columnHeader1.Width = 145;
                 hoadon.columnHeader2.Width = 75;
                 hoadon.columnHeader3.Width = 80;
-                hoadon.btn_ChonMon.Click += Btn_ChonMon_Click;
                 hoadon.btn_ThanhToan.Click += Btn_ThanhToan_Click;
+                hoadon.ClickHoaDon += Hoadon_ClickHoaDon;
             }
+        }
+        private void Hoadon_ClickHoaDon(string mahd)
+        {
+            this.Hide();
+            frmCTHD frm = new frmCTHD(int.Parse(mahd));
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void Btn_ThanhToan_Click(object sender, EventArgs e)
@@ -75,13 +83,6 @@ namespace GUI_QuanLi
             this.Hide();
             frmNhanVien frm = new frmNhanVien();
             frm.ShowDialog();
-            this.Close();
-        }
-
-        private void Btn_ChonMon_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
             this.Close();
         }
     }

@@ -19,11 +19,15 @@ namespace GUI_QuanLi
         {
             InitializeComponent();
         }
+        public delegate void OnClickHoaDon(string mahd);
+
+        public event OnClickHoaDon ClickHoaDon;
+
+       
 
         private void btn_ChonMon_Click(object sender, EventArgs e)
         {
-            frmCTHD frm = new frmCTHD(int.Parse(tb_IDHD.Text));
-            frm.ShowDialog();
+            if (ClickHoaDon != null) ClickHoaDon(this.Tag.ToString());
         }
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
