@@ -23,6 +23,10 @@ namespace GUI_QuanLi
             btnDel.Tag = this;
         }
 
+        public delegate void OnClickHoaDon(string mamonan,string sl);
+
+        public event OnClickHoaDon ClickChonMon;
+
         public DTO_MonAn Data { get; set; }
 
         public PhanLoai PhanLoai { get; set; } = PhanLoai.MonAn;
@@ -181,7 +185,7 @@ namespace GUI_QuanLi
 
         private void btnAddbill_Click(object sender, EventArgs e)
         {
-
+            if (ClickChonMon != null) ClickChonMon(this.Tag.ToString(),tbSL.Text);
         }
     }
 }

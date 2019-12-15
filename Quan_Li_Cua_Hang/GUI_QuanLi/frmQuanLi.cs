@@ -23,7 +23,7 @@ namespace GUI_QuanLi
             this.fLoutMonAn.AutoScroll = true;
             this.fLoutMonNuoc.AutoScroll = true;
             BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonAn, LoadMonAn);
-            //BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonNuoc, LoadMonNuoc);
+            BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonNuoc, LoadMonNuoc);
         }
 
         private void LoadMonAn(List<DTO_MonAn> monAns)

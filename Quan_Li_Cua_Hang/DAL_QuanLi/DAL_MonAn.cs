@@ -9,18 +9,16 @@ using System.Threading.Tasks;
 
 namespace DAL_QuanLi
 {
-    public class DAL_MonAn
+    public class DAL_MonAn : DBConnect
     {
         public static DAL_MonAn Instance { get; private set; }
-        String connectStr = @"Data Source=localhost;Initial Catalog=master;Integrated Security=True";
-        //String connectStr = @"Data Source = COMPUTER; Initial Catalog = QLCH; Integrated Security = True";
-        SqlConnection NganConnection;
+        SqlConnection Connection;
         private void Dtb()
         {
-            NganConnection = new SqlConnection(connectStr);
+            Connection = _conn;
             try
             {
-                NganConnection.Open();
+                Connection.Open();
             }
             catch (Exception e)
             {
@@ -34,7 +32,7 @@ namespace DAL_QuanLi
         {
             try
             {
-                SqlCommand myCmd = NganConnection.CreateCommand();
+                SqlCommand myCmd = Connection.CreateCommand();
                 myCmd.CommandText = "insert into QLCH.dbo.MONAN (tenmon, gia, phanloai, hinhanh) values (@tenmon, @gia, @phanloai, @hinhanh)";
                 myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
                 myCmd.Parameters.AddWithValue("@gia", ma.Gia);
@@ -52,7 +50,7 @@ namespace DAL_QuanLi
         {
             try
             {
-                SqlCommand myCmd = NganConnection.CreateCommand();
+                SqlCommand myCmd = Connection.CreateCommand();
                 myCmd.CommandText = "delete from QLCH.dbo.MONAN where mamon = @mamon";
                 myCmd.Parameters.AddWithValue("@mamon", i);
                 myCmd.ExecuteNonQuery();
@@ -79,7 +77,7 @@ namespace DAL_QuanLi
 
             try
             {
-                SqlCommand myCmd = NganConnection.CreateCommand();
+                SqlCommand myCmd = Connection.CreateCommand();
                 myCmd.CommandText = "select * from QLCH.dbo.MONAN Where phanloai = @phanloai";
                 myCmd.Parameters.AddWithValue("@phanloai", (int)phanLoai);
                 reader = myCmd.ExecuteReader();

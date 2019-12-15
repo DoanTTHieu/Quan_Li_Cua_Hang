@@ -42,7 +42,7 @@ namespace DAL_QuanLi
         public void TaoHoaDon()
         {
             _conn.Open();
-            string sql = "insert into HOADON(ngayhd,trangthai) values ('" + DateTime.Today.ToString() + "','0')";
+            string sql = "insert into HOADON(ngayhd,trigia,trangthai) values ('" + DateTime.Today.ToString() + "','0','0')";
             SqlCommand cmd = new SqlCommand(sql, _conn);
             cmd.ExecuteNonQuery();
             _conn.Close();
@@ -82,16 +82,16 @@ namespace DAL_QuanLi
         public DataTable LayHoaDon()
         {
             SqlDataAdapter da = new SqlDataAdapter("Select mahd,trigia,ban from HOADON where mahd>0 and trangthai = 0 ", _conn);
-            DataTable dtSinhvien = new DataTable();
-            da.Fill(dtSinhvien);
-            return dtSinhvien;
+            DataTable dtHoaDon = new DataTable();
+            da.Fill(dtHoaDon);
+            return dtHoaDon;
         }
         public DataTable LayThongTinHoaDon(int tam)
         {
             SqlDataAdapter da = new SqlDataAdapter("Select trigia,ban from HOADON where mahd='"+tam+"'", _conn);
-            DataTable dtSinhvien = new DataTable();
-            da.Fill(dtSinhvien);
-            return dtSinhvien;
+            DataTable dtHoaDon = new DataTable();
+            da.Fill(dtHoaDon);
+            return dtHoaDon;
         }
     }
 }

@@ -37,6 +37,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_idmonan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxGia = new System.Windows.Forms.TextBox();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -76,7 +77,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.ForeColor = System.Drawing.SystemColors.Window;
             this.btnBack.Image = global::GUI_QuanLi.Properties.Resources.icons8_undo_50px;
-            this.btnBack.Location = new System.Drawing.Point(3, 3);
+            this.btnBack.Location = new System.Drawing.Point(6, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(50, 49);
             this.btnBack.TabIndex = 5;
@@ -135,6 +136,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tb_idmonan);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbxGia);
             this.panel1.Controls.Add(this.lblPrice);
@@ -146,6 +148,14 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
             this.panel1.Size = new System.Drawing.Size(460, 25);
             this.panel1.TabIndex = 13;
+            // 
+            // tb_idmonan
+            // 
+            this.tb_idmonan.Location = new System.Drawing.Point(435, 2);
+            this.tb_idmonan.Name = "tb_idmonan";
+            this.tb_idmonan.Size = new System.Drawing.Size(22, 20);
+            this.tb_idmonan.TabIndex = 18;
+            this.tb_idmonan.Visible = false;
             // 
             // label1
             // 
@@ -324,7 +334,8 @@
         public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnAddbill;
         public System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox tbSL;
+        public System.Windows.Forms.TextBox tbSL;
         private System.Windows.Forms.Label lbSL;
+        public System.Windows.Forms.TextBox tb_idmonan;
     }
 }

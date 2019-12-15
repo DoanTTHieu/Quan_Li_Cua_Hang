@@ -35,13 +35,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_ChonMon = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_XacNhan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tb_TongTien = new System.Windows.Forms.TextBox();
             this.lbTongTien = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_XacNhan = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,9 +49,9 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,9 +101,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 416);
             this.panel2.Name = "panel2";
@@ -133,34 +133,11 @@
             this.btn_ChonMon.UseVisualStyleBackColor = true;
             this.btn_ChonMon.Click += new System.EventHandler(this.btn_ChonMon_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btn_XacNhan);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(210, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(86, 34);
-            this.panel4.TabIndex = 17;
-            // 
-            // btn_XacNhan
-            // 
-            this.btn_XacNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_XacNhan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_XacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btn_XacNhan.Location = new System.Drawing.Point(0, 0);
-            this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(86, 34);
-            this.btn_XacNhan.TabIndex = 32;
-            this.btn_XacNhan.Text = "Xác Nhận";
-            this.btn_XacNhan.UseVisualStyleBackColor = true;
-            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btn_ThanhToan);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(296, 0);
+            this.panel3.Location = new System.Drawing.Point(210, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(92, 34);
             this.panel3.TabIndex = 16;
@@ -187,7 +164,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(131, 34);
+            this.panel5.Size = new System.Drawing.Size(134, 34);
             this.panel5.TabIndex = 15;
             // 
             // tb_TongTien
@@ -210,6 +187,29 @@
             this.lbTongTien.Size = new System.Drawing.Size(70, 15);
             this.lbTongTien.TabIndex = 17;
             this.lbTongTien.Text = "Tổng Tiền :";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_XacNhan);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(302, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(86, 34);
+            this.panel4.TabIndex = 17;
+            // 
+            // btn_XacNhan
+            // 
+            this.btn_XacNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_XacNhan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_XacNhan.ForeColor = System.Drawing.Color.Black;
+            this.btn_XacNhan.Location = new System.Drawing.Point(0, 0);
+            this.btn_XacNhan.Name = "btn_XacNhan";
+            this.btn_XacNhan.Size = new System.Drawing.Size(86, 34);
+            this.btn_XacNhan.TabIndex = 32;
+            this.btn_XacNhan.Text = "Xác Nhận";
+            this.btn_XacNhan.UseVisualStyleBackColor = true;
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // listView1
             // 
@@ -260,10 +260,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
