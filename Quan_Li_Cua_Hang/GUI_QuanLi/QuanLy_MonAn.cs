@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QuanLi;
 using System.IO;
-using GUI_QuanLi.Utils;
+using DTO_QuanLi.Utils;
+using BUS_QuanLi;
+using BUS_QuanLi.Utils;
 
 namespace GUI_QuanLi
 {
@@ -104,8 +106,7 @@ namespace GUI_QuanLi
 
             if (Data != null)
             {
-                MD.StartService();
-                MD.Instance.DeleteInfo(Data.Mamon);
+                BUS_MonAn.DeleteTSLCKKCKLDLKCKKDLCKLKLCKLD(Data);
             }
         }
 
@@ -113,9 +114,9 @@ namespace GUI_QuanLi
         {
             Data.Tenmon = tbxTen.Text;
             Data.Gia = Convert.ToInt64(tbxGia.Text);
-            Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
+            Data.Hinhanh = openFileDialog1.FileName;
 
-            //MD.Instance.AddInfo(Data); -> Thay bang update
+            BUS_MonAn.UpdateLKKLKLCDKLCKLCKLCD(Data);
 
             SaveModePrepare();
         }
@@ -128,9 +129,9 @@ namespace GUI_QuanLi
                 Data.Tenmon = tbxTen.Text;
                 Data.Gia = Convert.ToInt64(tbxGia.Text);
                 Data.Phanloai = (int) PhanLoai;
-                Data.Hinhanh = ResourceUtil.CopyToResource(openFileDialog1.FileName);
+                Data.Hinhanh = openFileDialog1.FileName;
 
-                MD.Instance.AddInfo(Data);
+                BUS_MonAn.AddNewIOKLLKKLKLMKLMMKLMKL(Data);
 
                 SaveModePrepare();
             } catch
@@ -173,6 +174,8 @@ namespace GUI_QuanLi
         {
             if (Data == null) return;
             SaveModePrepare();
+            tbxGia.Text = Data.Gia.ToString();
+            tbxTen.Text = Data.Tenmon.ToString();
             SetPic(Data.Hinhanh.ToString());
         }
 

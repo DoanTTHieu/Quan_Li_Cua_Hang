@@ -95,7 +95,6 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="MD.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLy_MonAn.cs">
@@ -104,8 +103,6 @@
     <Compile Include="QuanLy_MonAn.Designer.cs">
       <DependentUpon>QuanLy_MonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\PhanLoai.cs" />
-    <Compile Include="Utils\ResourceUtil.cs" />
     <EmbeddedResource Include="frmCTHD.resx">
       <DependentUpon>frmCTHD.cs</DependentUpon>
     </EmbeddedResource>

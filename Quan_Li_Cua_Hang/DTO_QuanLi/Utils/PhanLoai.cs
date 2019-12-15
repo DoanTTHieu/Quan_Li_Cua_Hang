@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GUI_QuanLi.Utils
+namespace DTO_QuanLi.Utils
 {
     public enum PhanLoai
     {

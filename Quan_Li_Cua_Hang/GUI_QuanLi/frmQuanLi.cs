@@ -1,5 +1,5 @@
 ﻿using DTO_QuanLi;
-using GUI_QuanLi.Utils;
+using BUS_QuanLi;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO_QuanLi.Utils;
 
 namespace GUI_QuanLi
 {
@@ -21,47 +22,63 @@ namespace GUI_QuanLi
             this.DoubleBuffered = true;
             this.fLoutMonAn.AutoScroll = true;
             this.fLoutMonNuoc.AutoScroll = true;
-            LoadMonAn();
-            LoadMonNuoc();
+            BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonAn, LoadMonAn);
+            //BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonNuoc, LoadMonNuoc);
         }
 
-        private void LoadMonAn()
-        {
-            MD.StartService();
-            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonAn))
+        private void LoadMonAn(List<DTO_MonAn> monAns)
+        {            
+            foreach (var monAn in monAns)
             {
-                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                this.fLoutMonAn.Controls.Add(element);
-                element.panel5.Visible = false;
-                element.panel3.Visible = false;
-                element.panel2.Enabled = false;
-                element.panel2.Visible = false;
-                element.tbxTen.Enabled = false;
-                element.tbxGia.Enabled = false;
-                element.panel4.Visible = true;
-                element.panel4.Enabled = true;
-                element.Size = new Size(250, 250);
-                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
+                try
+                {
+                    this.fLoutMonAn.Invoke((MethodInvoker)delegate
+                    {
+                        QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+                        this.fLoutMonAn.Controls.Add(element);
+                        element.panel5.Visible = false;
+                        element.panel3.Visible = false;
+                        element.panel2.Enabled = false;
+                        element.panel2.Visible = false;
+                        element.tbxTen.Enabled = false;
+                        element.tbxGia.Enabled = false;
+                        element.panel4.Visible = true;
+                        element.panel4.Enabled = true;
+                        element.Size = new Size(250, 250);
+                        element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
+                    });
+                } catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
         }
 
-        private void LoadMonNuoc()
+        private void LoadMonNuoc(List<DTO_MonAn> monAns)
         {
-            MD.StartService();
-            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonNuoc))
+            foreach (DTO_MonAn monAn in monAns)
             {
-                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                this.fLoutMonNuoc.Controls.Add(element);
-                element.panel5.Visible = false;
-                element.panel3.Visible = false;
-                element.panel2.Enabled = false;
-                element.panel2.Visible = false;
-                element.tbxTen.Enabled = false;
-                element.tbxGia.Enabled = false;
-                element.panel4.Visible = true;
-                element.panel4.Enabled = true;
-                element.Size = new Size(250, 300);
-                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o,e,fLoutMonNuoc));
+                try
+                {
+                    this.fLoutMonAn.Invoke((MethodInvoker)delegate
+                    {
+                        QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+                        this.fLoutMonNuoc.Controls.Add(element);
+                        element.panel5.Visible = false;
+                        element.panel3.Visible = false;
+                        element.panel2.Enabled = false;
+                        element.panel2.Visible = false;
+                        element.tbxTen.Enabled = false;
+                        element.tbxGia.Enabled = false;
+                        element.panel4.Visible = true;
+                        element.panel4.Enabled = true;
+                        element.Size = new Size(250, 300);
+                        element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonNuoc));
+                    });
+                } catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
         }
 

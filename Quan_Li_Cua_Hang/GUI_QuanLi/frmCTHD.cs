@@ -1,5 +1,4 @@
 ﻿using DTO_QuanLi;
-using GUI_QuanLi.Utils;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -92,38 +91,38 @@ namespace GUI_QuanLi
 
         private void LoadMonAn()
         {
-            MD.StartService();
-            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonAn))
-            {
-                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                this.fLoutMonAn.Controls.Add(element);
-                element.panel5.Visible = true;
-                element.panel3.Visible = true;
-                element.panel2.Enabled = false;
-                element.panel2.Visible = false;
-                element.tbxTen.Enabled = false;
-                element.tbxGia.Enabled = false;
-                element.panel4.Visible = false;
-                element.Size = new Size(250, 250);
-            }
+            //MD.StartService();
+            //foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonAn))
+            //{
+            //    QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+            //    this.fLoutMonAn.Controls.Add(element);
+            //    element.panel5.Visible = true;
+            //    element.panel3.Visible = true;
+            //    element.panel2.Enabled = false;
+            //    element.panel2.Visible = false;
+            //    element.tbxTen.Enabled = false;
+            //    element.tbxGia.Enabled = false;
+            //    element.panel4.Visible = false;
+            //    element.Size = new Size(250, 250);
+            //}
         }
 
         private void LoadMonNuoc()
         {
-            MD.StartService();
-            foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonNuoc))
-            {
-                QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                this.fLoutMonNuoc.Controls.Add(element);
-                element.panel5.Visible = true;
-                element.panel3.Visible = true;
-                element.panel2.Enabled = false;
-                element.panel2.Visible = false;
-                element.tbxTen.Enabled = false;
-                element.tbxGia.Enabled = false;
-                element.panel4.Visible = false;
-                element.Size = new Size(250, 300);
-            }
+            //MD.StartService();
+            //foreach (DTO_MonAn monAn in MD.Instance.GetAllRecords(PhanLoai.MonNuoc))
+            //{
+            //    QuanLy_MonAn element = new QuanLy_MonAn(monAn);
+            //    this.fLoutMonNuoc.Controls.Add(element);
+            //    element.panel5.Visible = true;
+            //    element.panel3.Visible = true;
+            //    element.panel2.Enabled = false;
+            //    element.panel2.Visible = false;
+            //    element.tbxTen.Enabled = false;
+            //    element.tbxGia.Enabled = false;
+            //    element.panel4.Visible = false;
+            //    element.Size = new Size(250, 300);
+            //}
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
