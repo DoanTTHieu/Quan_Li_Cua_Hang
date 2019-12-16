@@ -79,6 +79,36 @@ namespace DAL_QuanLi
             cmd.ExecuteNonQuery();
             _conn.Close();
         }
+        public void CapNhatHoaDonv2(float tien, int tam, int ban)
+        {
+            _conn.Open();
+            string sql = "update HOADON set trigia ='" + tien + "',ban='" + ban + "'where mahd='" + tam + "'";
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+        }
+        public void CapNhatBan(int ban,int tam)
+        {
+            _conn.Open();
+            string sql = "update HOADON set ban='" + ban + "'where mahd='" + tam + "'";
+            SqlCommand cmd = new SqlCommand(sql, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+        }
+        public DataTable TongTien(DateTime ngay)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select sum(trigia) trigia from HOADON where trangthai = 1 and ngayhd='" + ngay + "'", _conn);
+            DataTable dtHoaDon = new DataTable();
+            da.Fill(dtHoaDon);
+            return dtHoaDon;
+        }
+        public DataTable SLHoaDon(DateTime ngay)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select count(mahd) sl from HOADON where trangthai = 1 and ngayhd='" + ngay + "'", _conn);
+            DataTable dtHoaDon = new DataTable();
+            da.Fill(dtHoaDon);
+            return dtHoaDon;
+        }
         public DataTable LayHoaDon()
         {
             SqlDataAdapter da = new SqlDataAdapter("Select mahd,trigia,ban from HOADON where mahd>0 and trangthai = 0 ", _conn);
@@ -89,6 +119,13 @@ namespace DAL_QuanLi
         public DataTable LayThongTinHoaDon(int tam)
         {
             SqlDataAdapter da = new SqlDataAdapter("Select trigia,ban from HOADON where mahd='"+tam+"'", _conn);
+            DataTable dtHoaDon = new DataTable();
+            da.Fill(dtHoaDon);
+            return dtHoaDon;
+        }
+        public DataTable LayHoaDonChoQuanLi(DateTime ngay)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select mahd,trigia,ban from HOADON where mahd>0 and trangthai = 1 and ngayhd='"+ngay+"'", _conn);
             DataTable dtHoaDon = new DataTable();
             da.Fill(dtHoaDon);
             return dtHoaDon;

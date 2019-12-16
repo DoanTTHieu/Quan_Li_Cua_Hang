@@ -35,6 +35,14 @@ namespace BUS_QuanLi
         {
             hd.CapNhatHoaDon(tien,tam);
         }
+        public void CapNhatHoaDonv2(float tien, int tam, int ban)
+        {
+            hd.CapNhatHoaDonv2(tien, tam, ban);
+        }
+        public void CapNhatBan(int ban,int tam)
+        {
+            hd.CapNhatBan(ban, tam);
+        }
         public DataTable LayHoaDon()
         {
             return hd.LayHoaDon();
@@ -42,6 +50,18 @@ namespace BUS_QuanLi
         public DataTable LayThongTinHoaDon(int tam)
         {
             return hd.LayThongTinHoaDon(tam);
+        }
+        public DataTable LayHoaDonChoQuanLi(DateTime ngay)
+        {
+            return hd.LayHoaDonChoQuanLi(ngay);
+        }
+        public DataTable TongTien(DateTime ngay)
+        {
+            return hd.TongTien(ngay);
+        }
+        public DataTable SLHoaDon(DateTime ngay)
+        {
+            return hd.SLHoaDon(ngay);
         }
 
     }

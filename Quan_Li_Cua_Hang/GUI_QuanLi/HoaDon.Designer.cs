@@ -38,6 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tb_TongTien = new System.Windows.Forms.TextBox();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -62,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 22);
+            this.panel1.Size = new System.Drawing.Size(521, 22);
             this.panel1.TabIndex = 0;
             // 
             // tb_IDHD
@@ -70,7 +71,7 @@
             this.tb_IDHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_IDHD.Dock = System.Windows.Forms.DockStyle.Right;
             this.tb_IDHD.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_IDHD.Location = new System.Drawing.Point(368, 0);
+            this.tb_IDHD.Location = new System.Drawing.Point(501, 0);
             this.tb_IDHD.Name = "tb_IDHD";
             this.tb_IDHD.Size = new System.Drawing.Size(20, 15);
             this.tb_IDHD.TabIndex = 19;
@@ -107,14 +108,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 416);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(388, 34);
+            this.panel2.Size = new System.Drawing.Size(521, 34);
             this.panel2.TabIndex = 2;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_ChonMon);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(131, 0);
+            this.panel6.Location = new System.Drawing.Point(264, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(79, 34);
             this.panel6.TabIndex = 18;
@@ -137,7 +138,7 @@
             // 
             this.panel3.Controls.Add(this.btn_ThanhToan);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(210, 0);
+            this.panel3.Location = new System.Drawing.Point(343, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(92, 34);
             this.panel3.TabIndex = 16;
@@ -158,14 +159,27 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.tb_TongTien);
             this.panel5.Controls.Add(this.lbTongTien);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(134, 34);
+            this.panel5.Size = new System.Drawing.Size(177, 34);
             this.panel5.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(136, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 15);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "VND";
             // 
             // tb_TongTien
             // 
@@ -174,7 +188,7 @@
             this.tb_TongTien.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_TongTien.Location = new System.Drawing.Point(73, 5);
             this.tb_TongTien.Name = "tb_TongTien";
-            this.tb_TongTien.Size = new System.Drawing.Size(54, 15);
+            this.tb_TongTien.Size = new System.Drawing.Size(63, 15);
             this.tb_TongTien.TabIndex = 16;
             // 
             // lbTongTien
@@ -192,7 +206,7 @@
             // 
             this.panel4.Controls.Add(this.btn_XacNhan);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(302, 0);
+            this.panel4.Location = new System.Drawing.Point(435, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(86, 34);
             this.panel4.TabIndex = 17;
@@ -224,7 +238,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 22);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(388, 394);
+            this.listView1.Size = new System.Drawing.Size(521, 394);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -255,7 +269,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "HoaDon";
-            this.Size = new System.Drawing.Size(388, 450);
+            this.Size = new System.Drawing.Size(521, 450);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -288,5 +302,6 @@
         public System.Windows.Forms.ColumnHeader columnHeader1;
         public System.Windows.Forms.ColumnHeader columnHeader2;
         public System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.Label label1;
     }
 }

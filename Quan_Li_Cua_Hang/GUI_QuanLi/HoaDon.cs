@@ -32,13 +32,24 @@ namespace GUI_QuanLi
 
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            if (tb_TongTien.Text == "0")
+            if (tb_TongTien.Text == "0"||tb_SoBan.Text =="")
             {
-                MessageBox.Show("Yêu Cầu Chọn Ít Nhất 1 Món", "Thông Báo", MessageBoxButtons.OK);
+                if(tb_TongTien.Text == "0" && tb_SoBan.Text == "")
+                {
+                    MessageBox.Show("Yêu Cầu Chọn Ít Nhất 1 Món \nYêu Cầu Nhập Số Bàn", "Thông Báo", MessageBoxButtons.OK);
+                }
+                else if (tb_TongTien.Text == "0")
+                {
+                    MessageBox.Show("Yêu Cầu Chọn Ít Nhất 1 Món", "Thông Báo", MessageBoxButtons.OK);
+                }
+                else if(tb_SoBan.Text == "")
+                {
+                    MessageBox.Show("Yêu Cầu Nhập Số Bàn", "Thông Báo", MessageBoxButtons.OK);                    
+                }
             }
             else
             {
-                hd.CapNhatHoaDon(float.Parse(tb_TongTien.Text), int.Parse(tb_IDHD.Text));
+                hd.CapNhatHoaDonv2(float.Parse(tb_TongTien.Text), int.Parse(tb_IDHD.Text),int.Parse(tb_SoBan.Text));
             }
             
         }

@@ -1,16 +1,17 @@
 ﻿using BUS_QuanLi.Utils;
-using DAL_QuanLi;
-using DTO_QuanLi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_QuanLi;
+using System.Data;
+using DTO_QuanLi;
 
 namespace BUS_QuanLi
 {
     public static class BUS_MonAn
-    {
+    {        
         public static void DeleteTSLCKKCKLDLKCKKDLCKLKLCKLD(DTO_MonAn data)
         {
             try
@@ -52,10 +53,20 @@ namespace BUS_QuanLi
                     data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
                     DAL_MonAn.Instance.AddInfo(data);
                 }).Start();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e);
             }
+        }        
+    }
+    public class BUS_MonAn2
+    {
+        DAL_MonAn ma = new DAL_MonAn();
+        public DataTable LayMonAn(int loai)
+        {            
+            return ma.LayMonAn(loai);
         }
     }
+    
 }

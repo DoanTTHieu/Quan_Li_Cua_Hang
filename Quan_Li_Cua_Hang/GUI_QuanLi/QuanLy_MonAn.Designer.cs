@@ -316,7 +316,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox picture;
+        public System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Button btnBack;
         public System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnSave;

@@ -42,10 +42,12 @@ namespace GUI_QuanLi
 
         private void btn_ThemHoaDon_Click(object sender, EventArgs e)
         {
+            this.Hide();
             hd.TaoHoaDon();
             int mahdtam = hd.LayIDHoaDon();
             frmCTHD frm = new frmCTHD(mahdtam);
             frm.ShowDialog();
+            this.Close();
         }
 
         private void loadHoaDon()
@@ -71,13 +73,14 @@ namespace GUI_QuanLi
                     hoadon.listView1.Items.Add(item);
                     hoadon.tb_TongTien.Text = (tien + gia*sl).ToString();
                     tien = float.Parse(hoadon.tb_TongTien.Text);
-                    hd.CapNhatHoaDon(tien, int.Parse(hoadon.tb_IDHD.Text));
+                    hd.CapNhatHoaDonv2(tien, int.Parse(hoadon.tb_IDHD.Text),int.Parse(hoadon.tb_SoBan.Text));
                 }
                 this.flowHoaDon.Controls.Add(hoadon);               
                 hoadon.Size = new Size(300, 450);
-                hoadon.panel3.Size = new Size(75, 23);
+                hoadon.panel3.Size = new Size(65, 23);
+                hoadon.panel5.Size = new Size(100, 23);
                 hoadon.panel4.Visible = false;
-                hoadon.panel6.Size = new Size(75, 23);
+                hoadon.panel6.Size = new Size(65, 23);
                 hoadon.columnHeader1.Width = 130;
                 hoadon.columnHeader2.Width = 85;
                 hoadon.columnHeader3.Width = 80;

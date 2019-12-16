@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Common;
+using System.Data;
 
 namespace DAL_QuanLi
 {
@@ -57,7 +59,7 @@ namespace DAL_QuanLi
             }
             catch (Exception e) { Console.WriteLine(e); }
         }
-        private DAL_MonAn()
+        public DAL_MonAn()
         {
             Dtb();
         }
@@ -114,6 +116,14 @@ namespace DAL_QuanLi
             }
 
             return result;
+        }
+        //
+        public DataTable LayMonAn(int loai)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("select * from MONAN where phanloai=" + loai, _conn);
+            DataTable dtMonAn = new DataTable();
+            da.Fill(dtMonAn);
+            return dtMonAn;
         }
     }
 }

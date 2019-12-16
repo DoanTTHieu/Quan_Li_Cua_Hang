@@ -120,7 +120,7 @@ namespace GUI_QuanLi
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            QuanLy_MonAn element = new QuanLy_MonAn(null);
+            QuanLy_MonAn element = new QuanLy_MonAn(null) { PhanLoai = PhanLoai.MonAn }; ;
             this.fLoutMonAn.Controls.Add(element);
             this.fLoutMonAn.Controls.SetChildIndex(element, 1);
             element.panel5.Visible = false;
