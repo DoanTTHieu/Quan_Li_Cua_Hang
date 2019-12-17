@@ -198,6 +198,16 @@ namespace GUI_QuanLi
                 tien = 0;
                 flag = true;
                 LoadHoaDon(mahdtam);
+                foreach (Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
+                {
+                    this.fLoutMonAn.Controls.Clear();
+                }
+                foreach (Control item in this.fLoutMonNuoc.Controls.OfType<QuanLy_MonAn>())
+                {
+                    this.fLoutMonNuoc.Controls.Clear();
+                }
+                loadmonan();
+                loadmonnuoc();
             }
         }
 

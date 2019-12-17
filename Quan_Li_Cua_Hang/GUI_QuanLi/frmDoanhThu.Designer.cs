@@ -51,6 +51,7 @@
             this.ngay.Name = "ngay";
             this.ngay.Size = new System.Drawing.Size(183, 24);
             this.ngay.TabIndex = 0;
+            this.ngay.TabStop = false;
             // 
             // materialLabel1
             // 
