@@ -148,11 +148,12 @@ namespace GUI_QuanLi
                 element.ClickChonMon += Element_ClickChonMon;
             }
         }
-        private void Element_ClickChonMon(string mamonan, string sl)
+        private bool Element_ClickChonMon(string mamonan, string sl)
         {
             if (tb_Ban.Text == "")
             {
                 MessageBox.Show("Yêu Cầu Nhập Số Bàn", "Thông Báo", MessageBoxButtons.OK);
+                return false;
             }
             else
             {
@@ -198,16 +199,7 @@ namespace GUI_QuanLi
                 tien = 0;
                 flag = true;
                 LoadHoaDon(mahdtam);
-                foreach (Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
-                {
-                    this.fLoutMonAn.Controls.Clear();
-                }
-                foreach (Control item in this.fLoutMonNuoc.Controls.OfType<QuanLy_MonAn>())
-                {
-                    this.fLoutMonNuoc.Controls.Clear();
-                }
-                loadmonan();
-                loadmonnuoc();
+                return true;
             }
         }
 

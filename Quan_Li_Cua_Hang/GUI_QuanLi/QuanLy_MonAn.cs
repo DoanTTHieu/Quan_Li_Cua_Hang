@@ -23,7 +23,7 @@ namespace GUI_QuanLi
             btnDel.Tag = this;
         }
 
-        public delegate void OnClickHoaDon(string mamonan,string sl);
+        public delegate bool OnClickHoaDon(string mamonan,string sl);
 
         public event OnClickHoaDon ClickChonMon;
 
@@ -185,7 +185,9 @@ namespace GUI_QuanLi
 
         private void btnAddbill_Click(object sender, EventArgs e)
         {
-            if (ClickChonMon != null) ClickChonMon(this.Tag.ToString(),tbSL.Text);
+            if (ClickChonMon != null)
+                if (ClickChonMon(this.Tag.ToString(), tbSL.Text))
+                    tbSL.Clear();
         }
     }
 }
