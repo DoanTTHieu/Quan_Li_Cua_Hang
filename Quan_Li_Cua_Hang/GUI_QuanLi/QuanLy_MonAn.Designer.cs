@@ -319,7 +319,7 @@
         public System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Button btnBack;
         public System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEdit;

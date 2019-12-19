@@ -16,71 +16,74 @@ namespace GUI_QuanLi
 {
     public partial class frmQuanLi : MaterialForm
     {
+        BUS_MonAn2 ma = new BUS_MonAn2();
         public frmQuanLi()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             this.fLoutMonAn.AutoScroll = true;
             this.fLoutMonNuoc.AutoScroll = true;
-            BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonAn, LoadMonAn);
-            BUS_QuanLi.BUS_QuanLi.LoadMon(PhanLoai.MonNuoc, LoadMonNuoc);
+            loadmonan();
+            loadmonnuoc();
         }
 
-        private void LoadMonAn(List<DTO_MonAn> monAns)
-        {            
-            foreach (var monAn in monAns)
-            {
-                try
-                {
-                    this.fLoutMonAn.Invoke((MethodInvoker)delegate
-                    {
-                        QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                        this.fLoutMonAn.Controls.Add(element);
-                        element.panel5.Visible = false;
-                        element.panel3.Visible = false;
-                        element.panel2.Enabled = false;
-                        element.panel2.Visible = false;
-                        element.tbxTen.Enabled = false;
-                        element.tbxGia.Enabled = false;
-                        element.panel4.Visible = true;
-                        element.panel4.Enabled = true;
-                        element.Size = new Size(250, 250);
-                        element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
-                    });
-                } catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            }
-        }
-
-        private void LoadMonNuoc(List<DTO_MonAn> monAns)
+        private void loadmonan()
         {
-            foreach (DTO_MonAn monAn in monAns)
+            foreach (DataRow row in ma.LayMonAn(0).Rows)
             {
-                try
-                {
-                    this.fLoutMonAn.Invoke((MethodInvoker)delegate
-                    {
-                        QuanLy_MonAn element = new QuanLy_MonAn(monAn);
-                        this.fLoutMonNuoc.Controls.Add(element);
-                        element.panel5.Visible = false;
-                        element.panel3.Visible = false;
-                        element.panel2.Enabled = false;
-                        element.panel2.Visible = false;
-                        element.tbxTen.Enabled = false;
-                        element.tbxGia.Enabled = false;
-                        element.panel4.Visible = true;
-                        element.panel4.Enabled = true;
-                        element.Size = new Size(250, 300);
-                        element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonNuoc));
-                    });
-                } catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
+                DTO_MonAn monan = new DTO_MonAn(int.Parse(row["mamon"].ToString()), row["tenmon"].ToString(), float.Parse(row["gia"].ToString()), 0, row["hinhanh"].ToString());
+                QuanLy_MonAn element = new QuanLy_MonAn(monan);
+                this.fLoutMonAn.Controls.Add(element);
+                element.panel5.Visible = false;
+                element.panel3.Visible = false;
+                element.panel2.Enabled = false;
+                element.panel2.Visible = false;
+                element.tbxTen.Enabled = false;
+                element.tbxGia.Enabled = false;
+                element.panel4.Visible = true;
+                element.panel4.Enabled = true;
+                element.Size = new Size(250, 250);
+                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
+                element.btnSave.Click += BtnSave_Click;
             }
         }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            foreach(Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
+            {
+                this.fLoutMonAn.Controls.Clear();
+            }
+            foreach (Control item in this.fLoutMonNuoc.Controls.OfType<QuanLy_MonAn>())
+            {
+                this.fLoutMonNuoc.Controls.Clear();
+            }           
+            this.fLoutMonAn.Controls.Add(button1);
+            this.fLoutMonNuoc.Controls.Add(button2);
+            loadmonan();
+            loadmonnuoc();
+        }
+
+        private void loadmonnuoc()
+        {
+            foreach (DataRow row in ma.LayMonAn(1).Rows)
+            {
+                DTO_MonAn monan = new DTO_MonAn(int.Parse(row["mamon"].ToString()), row["tenmon"].ToString(), float.Parse(row["gia"].ToString()), 1, row["hinhanh"].ToString());
+                QuanLy_MonAn element = new QuanLy_MonAn(monan);
+                this.fLoutMonNuoc.Controls.Add(element);
+                element.panel5.Visible = false;
+                element.panel3.Visible = false;
+                element.panel2.Enabled = false;
+                element.panel2.Visible = false;
+                element.tbxTen.Enabled = false;
+                element.tbxGia.Enabled = false;
+                element.panel4.Visible = true;
+                element.panel4.Enabled = true;
+                element.Size = new Size(250, 300);
+                element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
+                element.btnSave.Click += BtnSave_Click;
+            }
+        }     
 
         private void RemoveElement(object sender, EventArgs ev, FlowLayoutPanel container)
         {
@@ -133,6 +136,7 @@ namespace GUI_QuanLi
             element.panel4.Enabled = true;
             element.Size = new Size(250, 250);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonAn));
+            element.btnSave.Click += BtnSave_Click;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -150,6 +154,7 @@ namespace GUI_QuanLi
             element.panel4.Enabled = true;
             element.Size = new Size(250, 300);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonNuoc));
+            element.btnSave.Click += BtnSave_Click;
         }
     }
 }
