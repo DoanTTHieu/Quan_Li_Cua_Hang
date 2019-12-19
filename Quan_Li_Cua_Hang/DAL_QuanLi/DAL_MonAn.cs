@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 using System.Data;
+using System.Runtime.CompilerServices;
 
 namespace DAL_QuanLi
 {
@@ -36,6 +37,27 @@ namespace DAL_QuanLi
             {
                 SqlCommand myCmd = Connection.CreateCommand();
                 myCmd.CommandText = "insert into QLCH.dbo.MONAN (tenmon, gia, phanloai, hinhanh) values (@tenmon, @gia, @phanloai, @hinhanh)";
+                myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
+                myCmd.Parameters.AddWithValue("@gia", ma.Gia);
+                myCmd.Parameters.AddWithValue("@phanloai", ma.Phanloai);
+                myCmd.Parameters.AddWithValue("@hinhanh", ma.Hinhanh);
+                myCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+
+
+        public void UpdateInfo(DTO_MonAn ma, [CallerMemberName] string caller = null)
+        {
+            Console.WriteLine(caller);
+            try
+            {
+                SqlCommand myCmd = Connection.CreateCommand();
+                myCmd.CommandText = "update QLCH.dbo.MONAN set tenmon = @tenmon, gia = @gia, phanloai = @phanloai, hinhanh = @hinhanh where mamon = @mamon";
+                myCmd.Parameters.AddWithValue("@mamon", ma.Mamon);
                 myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
                 myCmd.Parameters.AddWithValue("@gia", ma.Gia);
                 myCmd.Parameters.AddWithValue("@phanloai", ma.Phanloai);

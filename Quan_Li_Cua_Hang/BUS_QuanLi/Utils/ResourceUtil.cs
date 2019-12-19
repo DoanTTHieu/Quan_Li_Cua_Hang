@@ -10,8 +10,9 @@ namespace BUS_QuanLi.Utils
     public static class ResourceUtil
     {
 
-        public static String CopyToResource(String filePath)
+        public static String CopyToResource(String filePath, String _default = "Resources/MonAn/Default.jpg")
         {
+            if (!File.Exists(filePath)) return _default;
             Directory.CreateDirectory("Resources/MonAn");
             String fileName = Path.GetRandomFileName() + Path.GetExtension(filePath);
             while (File.Exists(fileName))

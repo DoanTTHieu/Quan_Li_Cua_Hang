@@ -118,7 +118,7 @@ namespace GUI_QuanLi
         {
             Data.Tenmon = tbxTen.Text;
             Data.Gia = Convert.ToInt64(tbxGia.Text);
-            Data.Hinhanh = openFileDialog1.FileName;
+            Data.Hinhanh = !File.Exists(openFileDialog1.FileName) ? Data.Hinhanh : openFileDialog1.FileName;
 
             BUS_MonAn.UpdateLKKLKLCDKLCKLCKLCD(Data);
 

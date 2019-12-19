@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DAL_QuanLi;
 using System.Data;
 using DTO_QuanLi;
+using System.Runtime.CompilerServices;
 
 namespace BUS_QuanLi
 {
@@ -27,15 +28,16 @@ namespace BUS_QuanLi
             }
         }
 
-        public static void UpdateLKKLKLCDKLCKLCKLCD(DTO_MonAn data)
+        public static void UpdateLKKLKLCDKLCKLCKLCD(DTO_MonAn data, [CallerMemberName] string caller = null)
         {
+            Console.WriteLine(caller);
             try
             {
                 new Task(() =>
                 {
                     DAL_MonAn.StartService();
                     data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
-                    //Code DAL UPDATE VAO DAY
+                    DAL_MonAn.Instance.UpdateInfo(data);
                 }).Start();
             } catch (Exception e)
             {
