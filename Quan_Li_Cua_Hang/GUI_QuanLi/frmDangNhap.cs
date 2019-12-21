@@ -49,21 +49,21 @@ namespace GUI_QuanLi
 
         private void Btn_DangNhap_Click(object sender, EventArgs e)
         {
-            if (tb_UserName.Text == ""&&tb_Password.Text==null)
+            if (tb_UserName.Text == ""&&tb_Password.Text=="")
             {
-                MessageBox.Show("Please enter username and password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên tài khoản và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_UserName.Focus();
                 return;
             }
             if (tb_UserName.Text == "")
             {
-                MessageBox.Show("Please enter username!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_UserName.Focus();
                 return;
             }
             if (tb_Password.Text == "")
             {
-                MessageBox.Show("Please enter password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_Password.Focus();
                 return;
             }

@@ -37,6 +37,7 @@
             this.btn_TaoTaiKhoan = new MaterialSkin.Controls.MaterialRaisedButton();
             this.rbtn_NhanVien = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbtn_QuanLi = new MaterialSkin.Controls.MaterialRadioButton();
+            this.btn_TroVe = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // lb_UserName
@@ -48,9 +49,9 @@
             this.lb_UserName.Location = new System.Drawing.Point(159, 148);
             this.lb_UserName.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_UserName.Name = "lb_UserName";
-            this.lb_UserName.Size = new System.Drawing.Size(111, 27);
+            this.lb_UserName.Size = new System.Drawing.Size(163, 27);
             this.lb_UserName.TabIndex = 1;
-            this.lb_UserName.Text = "Username";
+            this.lb_UserName.Text = "Tên người dùng";
             // 
             // lb_Password
             // 
@@ -61,9 +62,9 @@
             this.lb_Password.Location = new System.Drawing.Point(159, 243);
             this.lb_Password.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_Password.Name = "lb_Password";
-            this.lb_Password.Size = new System.Drawing.Size(109, 27);
+            this.lb_Password.Size = new System.Drawing.Size(102, 27);
             this.lb_Password.TabIndex = 2;
-            this.lb_Password.Text = "Password";
+            this.lb_Password.Text = "Mật khẩu";
             // 
             // lb_PasswordAgain
             // 
@@ -74,9 +75,9 @@
             this.lb_PasswordAgain.Location = new System.Drawing.Point(159, 337);
             this.lb_PasswordAgain.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_PasswordAgain.Name = "lb_PasswordAgain";
-            this.lb_PasswordAgain.Size = new System.Drawing.Size(169, 27);
+            this.lb_PasswordAgain.Size = new System.Drawing.Size(195, 27);
             this.lb_PasswordAgain.TabIndex = 3;
-            this.lb_PasswordAgain.Text = "Password Again";
+            this.lb_PasswordAgain.Text = "Mật khẩu xác nhận";
             // 
             // tb_UserName
             // 
@@ -136,13 +137,13 @@
             this.btn_TaoTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
             this.btn_TaoTaiKhoan.Depth = 0;
             this.btn_TaoTaiKhoan.Icon = null;
-            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(164, 523);
+            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(322, 524);
             this.btn_TaoTaiKhoan.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_TaoTaiKhoan.Name = "btn_TaoTaiKhoan";
             this.btn_TaoTaiKhoan.Primary = true;
-            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(237, 36);
+            this.btn_TaoTaiKhoan.Size = new System.Drawing.Size(110, 36);
             this.btn_TaoTaiKhoan.TabIndex = 8;
-            this.btn_TaoTaiKhoan.Text = "Sign up to Manager";
+            this.btn_TaoTaiKhoan.Text = "Đăng ký";
             this.btn_TaoTaiKhoan.UseVisualStyleBackColor = false;
             this.btn_TaoTaiKhoan.Click += new System.EventHandler(this.Btn_TaoTaiKhoan_Click1);
             // 
@@ -180,11 +181,29 @@
             this.rbtn_QuanLi.Text = "Quản lí";
             this.rbtn_QuanLi.UseVisualStyleBackColor = true;
             // 
+            // btn_TroVe
+            // 
+            this.btn_TroVe.AutoSize = true;
+            this.btn_TroVe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_TroVe.Depth = 0;
+            this.btn_TroVe.Icon = null;
+            this.btn_TroVe.Location = new System.Drawing.Point(164, 524);
+            this.btn_TroVe.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_TroVe.Name = "btn_TroVe";
+            this.btn_TroVe.Primary = true;
+            this.btn_TroVe.Size = new System.Drawing.Size(93, 36);
+            this.btn_TroVe.TabIndex = 11;
+            this.btn_TroVe.Text = "Trở về";
+            this.btn_TroVe.UseVisualStyleBackColor = true;
+            this.btn_TroVe.Click += new System.EventHandler(this.btn_TroVe_Click);
+            // 
             // frmTaoTaiKhoan
             // 
+            this.AcceptButton = this.btn_TaoTaiKhoan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 650);
+            this.Controls.Add(this.btn_TroVe);
             this.Controls.Add(this.rbtn_QuanLi);
             this.Controls.Add(this.rbtn_NhanVien);
             this.Controls.Add(this.btn_TaoTaiKhoan);
@@ -196,7 +215,7 @@
             this.Controls.Add(this.lb_UserName);
             this.Name = "frmTaoTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sign up";
+            this.Text = "Đăng ký";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +231,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btn_TaoTaiKhoan;
         private MaterialSkin.Controls.MaterialRadioButton rbtn_NhanVien;
         private MaterialSkin.Controls.MaterialRadioButton rbtn_QuanLi;
+        private MaterialSkin.Controls.MaterialRaisedButton btn_TroVe;
     }
 }

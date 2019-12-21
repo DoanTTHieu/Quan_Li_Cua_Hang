@@ -59,18 +59,19 @@ namespace DAL_QuanLi
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                if (dt == null)
+                if (dt.Rows.Count == 0)
                 {
-                    tam = -1;//da co tai khoan
+                    tam = 1;//chua co tai khoan
                 }
                 else
                 {
-                    tam = 1;//chua ton tai tai khoan
+                    tam = -1;//da ton tai tai khoan
                 }
+
             }
             catch (Exception)
             {
-                //return "-1";
+                return -2;
                 //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
             }
             finally
@@ -82,7 +83,7 @@ namespace DAL_QuanLi
                 try
                 {
                     if (pw1 != pw2)
-                        return 3;//mau khau xac nhan chua dung
+                        tam = 3;//mau khau xac nhan chua dung
                     else
                     {
                         _conn.Open();
@@ -93,20 +94,17 @@ namespace DAL_QuanLi
                         da.Fill(dt);
                         if (dt != null)
                         {
-
+                            tam = 2;
                         }
                         else
                         {
-                            tam = -1;
+                            tam = -2;
                         }
-                        return 2;//nhap dung mat khau xac nhan
-
                     }
-                    
                 }
                 catch (Exception)
                 {
-                    //return "-1";
+                    return -2;
                     //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
                 }
                 finally
@@ -115,6 +113,35 @@ namespace DAL_QuanLi
                 }
             }
             return tam;
+        }
+
+        public int KiemTraTonTaiQuanLi()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE chucvu ='" + 0 + "'", _conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            catch (Exception)
+            {
+                return -1;
+                //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
+            }
+            finally
+            {
+                _conn.Close();
+            }
         }
     }
 }

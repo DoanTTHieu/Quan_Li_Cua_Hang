@@ -19,5 +19,9 @@ namespace BUS_QuanLi
         {
             return ql.TaoTaiKhoan(us, pw1, pw2,cv);
         }
+        public int KiemTraTonTaiQuanLi()
+        {
+            return ql.KiemTraTonTaiQuanLi();
+        }
     }
 }
