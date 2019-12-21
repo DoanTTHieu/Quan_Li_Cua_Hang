@@ -49,7 +49,7 @@ namespace GUI_QuanLi
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
-        {
+        {            
             foreach(Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
             {
                 this.fLoutMonAn.Controls.Clear();

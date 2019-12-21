@@ -148,7 +148,7 @@ namespace GUI_QuanLi
                 element.ClickChonMon += Element_ClickChonMon;
             }
         }
-        private bool Element_ClickChonMon(string mamonan, string sl)
+        private bool Element_ClickChonMon(string mamonan, string tenmon, string gia,string sl)
         {
             if (tb_Ban.Text == "")
             {
@@ -177,7 +177,7 @@ namespace GUI_QuanLi
 
                 if (solg == 0)
                 {
-                    ct.TaoCTHD(tam, int.Parse(mamonan), sltam);
+                    ct.TaoCTHD(tam, int.Parse(mamonan),tenmon,float.Parse(gia), sltam);
                 }
                 else if (solg != 0)
                 {

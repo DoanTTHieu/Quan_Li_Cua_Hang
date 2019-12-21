@@ -39,10 +39,10 @@ namespace DAL_QuanLi
             _conn.Close();
             return sl;
         }
-        public void TaoCTHD(int mahd,int mamon,int sl)
+        public void TaoCTHD(int mahd,int mamon,string tenmon,float gia,int sl)
         {
             _conn.Open();
-            string sql = "insert into CTHD values('"+mahd+"','"+mamon+"','"+sl+"')";
+            string sql = "insert into CTHD values('"+mahd+"','"+mamon+"',N'"+tenmon+"','"+gia+"','"+sl+"')";
             SqlCommand cmd = new SqlCommand(sql, _conn);
             cmd.ExecuteNonQuery();
             _conn.Close();
@@ -73,7 +73,7 @@ namespace DAL_QuanLi
         }
         public DataTable LayCTHD(int mahd)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select tenmon,gia,solg from CTHD,HOADON,MONAN where CTHD.mamon = MONAN.mamon and CTHD.mahd = HOADON.mahd and HOADON.mahd=" + mahd, _conn);
+            SqlDataAdapter da = new SqlDataAdapter("select tenmon,gia,solg from CTHD,HOADON where CTHD.mahd = HOADON.mahd and HOADON.mahd=" + mahd, _conn);
             DataTable dtCTHD = new DataTable();
             da.Fill(dtCTHD);
             return dtCTHD;

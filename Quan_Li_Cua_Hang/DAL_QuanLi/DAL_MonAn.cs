@@ -36,8 +36,8 @@ namespace DAL_QuanLi
             try
             {
                 SqlCommand myCmd = Connection.CreateCommand();
-                myCmd.CommandText = "insert into QLCH.dbo.MONAN (tenmon, gia, phanloai, hinhanh) values (@tenmon, @gia, @phanloai, @hinhanh)";
-                myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
+                myCmd.CommandText = "insert into QLCH.dbo.MONAN (tenmon, gia, phanloai, hinhanh) values (N'"+ma.Tenmon+"', @gia, @phanloai, @hinhanh)";
+                //myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
                 myCmd.Parameters.AddWithValue("@gia", ma.Gia);
                 myCmd.Parameters.AddWithValue("@phanloai", ma.Phanloai);
                 myCmd.Parameters.AddWithValue("@hinhanh", ma.Hinhanh);
@@ -56,8 +56,8 @@ namespace DAL_QuanLi
             try
             {
                 SqlCommand myCmd = Connection.CreateCommand();
-                myCmd.CommandText = "update QLCH.dbo.MONAN set tenmon = @tenmon, gia = @gia, phanloai = @phanloai, hinhanh = @hinhanh where mamon = @mamon";
-                myCmd.Parameters.AddWithValue("@mamon", ma.Mamon);
+                myCmd.CommandText = "update QLCH.dbo.MONAN set tenmon = N'"+ma.Tenmon+"', gia = @gia, phanloai = @phanloai, hinhanh = @hinhanh where mamon = @mamon";
+                //myCmd.Parameters.AddWithValue("@mamon", ma.Mamon);
                 myCmd.Parameters.AddWithValue("@tenmon", ma.Tenmon);
                 myCmd.Parameters.AddWithValue("@gia", ma.Gia);
                 myCmd.Parameters.AddWithValue("@phanloai", ma.Phanloai);

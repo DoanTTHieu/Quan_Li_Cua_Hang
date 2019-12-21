@@ -74,7 +74,7 @@
             this.btn_Thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Thoat.Location = new System.Drawing.Point(28, 189);
+            this.btn_Thoat.Location = new System.Drawing.Point(37, 188);
             this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(124, 31);
@@ -86,10 +86,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 159);
+            this.label1.Location = new System.Drawing.Point(54, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 26);
+            this.label1.Size = new System.Drawing.Size(83, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Người dùng";
             // 
@@ -140,7 +140,7 @@
             // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.flowHoaDon);

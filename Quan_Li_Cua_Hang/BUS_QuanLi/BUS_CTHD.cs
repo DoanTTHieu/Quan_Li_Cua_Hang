@@ -16,9 +16,9 @@ namespace BUS_QuanLi
         {
             return ct.LaySLMonAn(mahd, mamon);
         }
-        public void TaoCTHD(int mahd, int mamon, int sl)
+        public void TaoCTHD(int mahd, int mamon,string tenmon,float gia, int sl)
         {
-            ct.TaoCTHD(mahd, mamon, sl);
+            ct.TaoCTHD(mahd, mamon,tenmon,gia, sl);
         }
         public void CapNhatCTHD(int mahd, int mamon, int sl)
         {

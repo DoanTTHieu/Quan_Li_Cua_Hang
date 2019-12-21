@@ -23,7 +23,7 @@ namespace GUI_QuanLi
             btnDel.Tag = this;
         }
 
-        public delegate bool OnClickHoaDon(string mamonan,string sl);
+        public delegate bool OnClickHoaDon(string mamonan,string tenmon,string gia,string sl);
 
         public event OnClickHoaDon ClickChonMon;
 
@@ -85,12 +85,20 @@ namespace GUI_QuanLi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (Data == null)
+            if (tbxTen.Text == "" || tbxGia.Text == "" || picture.BackgroundImage==null)
             {
-                SaveButtonClick();
-            } else
+                MessageBox.Show("Nhập Không Đầy Đủ Thông Tin Món Ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
             {
-                UpdateButtonClick();
+                if (Data == null)
+                {
+                    SaveButtonClick();
+                }
+                else
+                {
+                    UpdateButtonClick();
+                }
             }
         }
 
@@ -186,7 +194,7 @@ namespace GUI_QuanLi
         private void btnAddbill_Click(object sender, EventArgs e)
         {
             if (ClickChonMon != null)
-                if (ClickChonMon(this.Tag.ToString(), tbSL.Text))
+                if (ClickChonMon(this.Tag.ToString(),tbxTen.Text,tbxGia.Text, tbSL.Text))
                     tbSL.Clear();
         }
     }
