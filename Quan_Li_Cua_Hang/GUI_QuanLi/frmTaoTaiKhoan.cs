@@ -25,12 +25,22 @@ namespace GUI_QuanLi
         }
         private void Load_Form()
         {
+            pn_MatKhauQuanLi.Hide();
             int tam = nv.KiemTraTonTaiQuanLi();
             if (tam == 1)
             {
                 rbtn_NhanVien.Checked = true;
                 rbtn_QuanLi.Enabled = false;
+                pn_MatKhauQuanLi.Show();
+
             }
+            else
+            {
+                rbtn_QuanLi.Checked = true;
+                rbtn_NhanVien.Enabled = false;
+
+            }
+
         }
         private void Btn_TaoTaiKhoan_Click1(object sender, EventArgs e)
         {
@@ -64,28 +74,44 @@ namespace GUI_QuanLi
                 return;
 
             }
-            if (tb_Password.Text != tb_PasswordAgain.Text)
-            {
-                MessageBox.Show("Nhập sai mật khẩu xác nhận.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
 
             this.Hide();
             int cv = rbtn_QuanLi.Checked ? 0 : 1;
-            int temp = nv.TaoTaiKhoan(tb_UserName.Text, tb_Password.Text, tb_PasswordAgain.Text,cv);
-            if ( temp== 3)
+            int check = nv.KiemTraTonTaiQuanLi();
+            int temp;
+            if (check==1)
+            {
+                if (tb_MatKhauQuanLi.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mật khẩu quản lí!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
+                temp = nv.TaoTaiKhoanNhanVien(tb_UserName.Text, tb_Password.Text, tb_PasswordAgain.Text, cv, tb_MatKhauQuanLi.Text);
+            }
+            else
+                temp = nv.TaoTaiKhoanQuanLi(tb_UserName.Text, tb_Password.Text, tb_PasswordAgain.Text, cv);
+            if(temp==4)
+            {
+                MessageBox.Show("Mật khẩu quản lí không đúng. Vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                this.Show();
+                tb_MatKhauQuanLi.Focus();
+            }
+            else if ( temp== 3)
             {
                 this.Show();
+                MessageBox.Show("Nhập sai mật khẩu xác nhận.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 tb_PasswordAgain.Focus();       
             }
             else if (temp == 2)
             {
-                //nhap  mat khau tai khoan quan li
                 MessageBox.Show("Tạo tài khoản thành công.");
                 frmDangNhap frmDN = new frmDangNhap();
                 frmDN.ShowDialog();
                 this.Close();
+               
+
             }
             else if(temp==-1)
             {

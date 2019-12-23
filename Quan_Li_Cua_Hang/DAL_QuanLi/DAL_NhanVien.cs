@@ -49,7 +49,7 @@ namespace DAL_QuanLi
           
         }
 
-        public int TaoTaiKhoan(string un, string pw1, string pw2, int cv)
+        public int TaoTaiKhoanNhanVien(string un, string pw1, string pw2, int cv,string mkql)
         {
             int tam = 0;
             try
@@ -78,14 +78,95 @@ namespace DAL_QuanLi
             {
                 _conn.Close();
             }
+
             if(tam==1)
             {
-                try
+
+                if (pw1 != pw2)
+                    tam = 3;//mau khau xac nhan chua dung
+                else
                 {
-                    if (pw1 != pw2)
-                        tam = 3;//mau khau xac nhan chua dung
-                    else
+                    string temp = getMatKhauQuanLi();
+
+                    if (mkql == temp)
                     {
+                        try
+                        {
+
+                            //
+                            _conn.Open();
+                            string SQL1 = string.Format("INSERT INTO NHANVIEN(dangnhap,pass, chucvu) VALUES ('{0}', '{1}', '{2}')", un, pw1, cv);
+                            SqlCommand cmd1 = new SqlCommand(SQL1, _conn);
+                            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            if (dt != null)
+                            {
+                                tam = 2;
+                            }
+                            else
+                            {
+                                tam = -2;
+                            }
+
+                        }
+                        catch (Exception)
+                        {
+                            return -2;
+                        }
+                        finally
+                        {
+                            _conn.Close();
+                        }
+                    }
+                    else
+                        tam = 4;
+                   
+                }
+            }
+            return tam;
+        }
+
+
+        public int TaoTaiKhoanQuanLi(string un, string pw1, string pw2, int cv)
+        {
+            int tam = 0;
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE dangnhap ='" + un + "'", _conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count == 0)
+                {
+                    tam = 1;//chua co tai khoan
+                }
+                else
+                {
+                    tam = -1;//da ton tai tai khoan
+                }
+
+            }
+            catch (Exception)
+            {
+                return -2;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+
+            if (tam == 1)
+            {
+
+                if (pw1 != pw2)
+                    tam = 3;//mau khau xac nhan chua dung
+                else
+                {
+                    try
+                    {
+                        //
                         _conn.Open();
                         string SQL1 = string.Format("INSERT INTO NHANVIEN(dangnhap,pass, chucvu) VALUES ('{0}', '{1}', '{2}')", un, pw1, cv);
                         SqlCommand cmd1 = new SqlCommand(SQL1, _conn);
@@ -100,21 +181,20 @@ namespace DAL_QuanLi
                         {
                             tam = -2;
                         }
+
                     }
-                }
-                catch (Exception)
-                {
-                    return -2;
-                    //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
-                }
-                finally
-                {
-                    _conn.Close();
+                    catch (Exception)
+                    {
+                        return -2;
+                    }
+                    finally
+                    {
+                        _conn.Close();
+                    }
                 }
             }
             return tam;
         }
-
         public int KiemTraTonTaiQuanLi()
         {
             try
@@ -136,12 +216,39 @@ namespace DAL_QuanLi
             catch (Exception)
             {
                 return -1;
-                //MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
             }
             finally
             {
                 _conn.Close();
             }
+        }
+        public string getMatKhauQuanLi()
+        {
+            string temp = "";
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NHANVIEN WHERE chucvu ='" + 0 + "'", _conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        temp = dr["pass"].ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                temp = "";
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return temp;
         }
     }
 }

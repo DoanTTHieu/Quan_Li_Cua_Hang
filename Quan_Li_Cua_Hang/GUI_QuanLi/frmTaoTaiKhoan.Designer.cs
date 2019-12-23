@@ -38,6 +38,10 @@
             this.rbtn_NhanVien = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbtn_QuanLi = new MaterialSkin.Controls.MaterialRadioButton();
             this.btn_TroVe = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.pn_MatKhauQuanLi = new System.Windows.Forms.Panel();
+            this.tb_MatKhauQuanLi = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.pn_MatKhauQuanLi.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_UserName
@@ -83,7 +87,7 @@
             // 
             this.tb_UserName.Depth = 0;
             this.tb_UserName.Hint = "";
-            this.tb_UserName.Location = new System.Drawing.Point(164, 178);
+            this.tb_UserName.Location = new System.Drawing.Point(154, 178);
             this.tb_UserName.MaxLength = 32767;
             this.tb_UserName.MouseState = MaterialSkin.MouseState.HOVER;
             this.tb_UserName.Name = "tb_UserName";
@@ -92,7 +96,7 @@
             this.tb_UserName.SelectionLength = 0;
             this.tb_UserName.SelectionStart = 0;
             this.tb_UserName.Size = new System.Drawing.Size(432, 32);
-            this.tb_UserName.TabIndex = 4;
+            this.tb_UserName.TabIndex = 1;
             this.tb_UserName.TabStop = false;
             this.tb_UserName.UseSystemPasswordChar = false;
             // 
@@ -109,7 +113,7 @@
             this.tb_Password.SelectionLength = 0;
             this.tb_Password.SelectionStart = 0;
             this.tb_Password.Size = new System.Drawing.Size(432, 32);
-            this.tb_Password.TabIndex = 5;
+            this.tb_Password.TabIndex = 2;
             this.tb_Password.TabStop = false;
             this.tb_Password.UseSystemPasswordChar = false;
             // 
@@ -117,7 +121,7 @@
             // 
             this.tb_PasswordAgain.Depth = 0;
             this.tb_PasswordAgain.Hint = "";
-            this.tb_PasswordAgain.Location = new System.Drawing.Point(154, 367);
+            this.tb_PasswordAgain.Location = new System.Drawing.Point(163, 367);
             this.tb_PasswordAgain.MaxLength = 32767;
             this.tb_PasswordAgain.MouseState = MaterialSkin.MouseState.HOVER;
             this.tb_PasswordAgain.Name = "tb_PasswordAgain";
@@ -126,7 +130,7 @@
             this.tb_PasswordAgain.SelectionLength = 0;
             this.tb_PasswordAgain.SelectionStart = 0;
             this.tb_PasswordAgain.Size = new System.Drawing.Size(432, 32);
-            this.tb_PasswordAgain.TabIndex = 6;
+            this.tb_PasswordAgain.TabIndex = 3;
             this.tb_PasswordAgain.TabStop = false;
             this.tb_PasswordAgain.UseSystemPasswordChar = false;
             // 
@@ -137,7 +141,7 @@
             this.btn_TaoTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(119)))), ((int)(((byte)(240)))));
             this.btn_TaoTaiKhoan.Depth = 0;
             this.btn_TaoTaiKhoan.Icon = null;
-            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(322, 524);
+            this.btn_TaoTaiKhoan.Location = new System.Drawing.Point(322, 571);
             this.btn_TaoTaiKhoan.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_TaoTaiKhoan.Name = "btn_TaoTaiKhoan";
             this.btn_TaoTaiKhoan.Primary = true;
@@ -152,7 +156,7 @@
             this.rbtn_NhanVien.AutoSize = true;
             this.rbtn_NhanVien.Depth = 0;
             this.rbtn_NhanVien.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rbtn_NhanVien.Location = new System.Drawing.Point(164, 442);
+            this.rbtn_NhanVien.Location = new System.Drawing.Point(168, 413);
             this.rbtn_NhanVien.Margin = new System.Windows.Forms.Padding(0);
             this.rbtn_NhanVien.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbtn_NhanVien.MouseState = MaterialSkin.MouseState.HOVER;
@@ -169,7 +173,7 @@
             this.rbtn_QuanLi.AutoSize = true;
             this.rbtn_QuanLi.Depth = 0;
             this.rbtn_QuanLi.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rbtn_QuanLi.Location = new System.Drawing.Point(337, 442);
+            this.rbtn_QuanLi.Location = new System.Drawing.Point(337, 413);
             this.rbtn_QuanLi.Margin = new System.Windows.Forms.Padding(0);
             this.rbtn_QuanLi.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rbtn_QuanLi.MouseState = MaterialSkin.MouseState.HOVER;
@@ -187,7 +191,7 @@
             this.btn_TroVe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_TroVe.Depth = 0;
             this.btn_TroVe.Icon = null;
-            this.btn_TroVe.Location = new System.Drawing.Point(164, 524);
+            this.btn_TroVe.Location = new System.Drawing.Point(168, 571);
             this.btn_TroVe.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_TroVe.Name = "btn_TroVe";
             this.btn_TroVe.Primary = true;
@@ -197,12 +201,52 @@
             this.btn_TroVe.UseVisualStyleBackColor = true;
             this.btn_TroVe.Click += new System.EventHandler(this.btn_TroVe_Click);
             // 
+            // pn_MatKhauQuanLi
+            // 
+            this.pn_MatKhauQuanLi.Controls.Add(this.tb_MatKhauQuanLi);
+            this.pn_MatKhauQuanLi.Controls.Add(this.materialLabel1);
+            this.pn_MatKhauQuanLi.Location = new System.Drawing.Point(154, 457);
+            this.pn_MatKhauQuanLi.Name = "pn_MatKhauQuanLi";
+            this.pn_MatKhauQuanLi.Size = new System.Drawing.Size(440, 108);
+            this.pn_MatKhauQuanLi.TabIndex = 4;
+            // 
+            // tb_MatKhauQuanLi
+            // 
+            this.tb_MatKhauQuanLi.Depth = 0;
+            this.tb_MatKhauQuanLi.Hint = "";
+            this.tb_MatKhauQuanLi.Location = new System.Drawing.Point(9, 51);
+            this.tb_MatKhauQuanLi.MaxLength = 32767;
+            this.tb_MatKhauQuanLi.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tb_MatKhauQuanLi.Name = "tb_MatKhauQuanLi";
+            this.tb_MatKhauQuanLi.PasswordChar = '*';
+            this.tb_MatKhauQuanLi.SelectedText = "";
+            this.tb_MatKhauQuanLi.SelectionLength = 0;
+            this.tb_MatKhauQuanLi.SelectionStart = 0;
+            this.tb_MatKhauQuanLi.Size = new System.Drawing.Size(335, 32);
+            this.tb_MatKhauQuanLi.TabIndex = 4;
+            this.tb_MatKhauQuanLi.TabStop = false;
+            this.tb_MatKhauQuanLi.UseSystemPasswordChar = false;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(10, 13);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(171, 27);
+            this.materialLabel1.TabIndex = 0;
+            this.materialLabel1.Text = "Mật khẩu quản lí";
+            // 
             // frmTaoTaiKhoan
             // 
             this.AcceptButton = this.btn_TaoTaiKhoan;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 650);
+            this.Controls.Add(this.pn_MatKhauQuanLi);
             this.Controls.Add(this.btn_TroVe);
             this.Controls.Add(this.rbtn_QuanLi);
             this.Controls.Add(this.rbtn_NhanVien);
@@ -216,6 +260,8 @@
             this.Name = "frmTaoTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký";
+            this.pn_MatKhauQuanLi.ResumeLayout(false);
+            this.pn_MatKhauQuanLi.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +278,8 @@
         private MaterialSkin.Controls.MaterialRadioButton rbtn_NhanVien;
         private MaterialSkin.Controls.MaterialRadioButton rbtn_QuanLi;
         private MaterialSkin.Controls.MaterialRaisedButton btn_TroVe;
+        private System.Windows.Forms.Panel pn_MatKhauQuanLi;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tb_MatKhauQuanLi;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

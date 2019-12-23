@@ -15,13 +15,22 @@ namespace BUS_QuanLi
         {
             return ql.DangNhap(us,pw);
         }
-        public int TaoTaiKhoan(string us, string pw1, string pw2, int cv)
+        public int TaoTaiKhoanNhanVien(string us, string pw1, string pw2, int cv, string mkql)
         {
-            return ql.TaoTaiKhoan(us, pw1, pw2,cv);
+            return ql.TaoTaiKhoanNhanVien(us, pw1, pw2,cv, mkql);
         }
+        public int TaoTaiKhoanQuanLi(string us, string pw1, string pw2, int cv)
+        {
+            return ql.TaoTaiKhoanQuanLi(us, pw1, pw2, cv);
+        }
+
         public int KiemTraTonTaiQuanLi()
         {
             return ql.KiemTraTonTaiQuanLi();
+        }
+        public string getMatKhauQuanLi()
+        {
+            return ql.getMatKhauQuanLi();
         }
     }
 }
