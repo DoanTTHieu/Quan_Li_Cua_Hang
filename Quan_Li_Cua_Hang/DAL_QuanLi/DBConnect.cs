@@ -12,7 +12,7 @@ namespace DAL_QuanLi
         //hieu
         //protected SqlConnection _conn = new SqlConnection("Data Source=DESKTOP-9E5E5MG;Initial Catalog=QLCH;Integrated Security=True");
         //sinh
-        //protected SqlConnection _conn = new SqlConnection("Data Source = COMPUTER; Initial Catalog = QLCH; Integrated Security = True");
+        protected SqlConnection _conn = new SqlConnection("Data Source = COMPUTER; Initial Catalog = QLCH; Integrated Security = True");
         //Ngân
         //protected SqlConnection _conn = new SqlConnection("Data Source = DESKTOP-UMICKKN; Initial Catalog = QLCH; Integrated Security = True");
 

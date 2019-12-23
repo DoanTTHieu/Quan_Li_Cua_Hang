@@ -36,9 +36,5 @@ namespace BUS_QuanLi
         {
             return ct.LayCTHD(mahd);
         }
-        public DataTable LayMaMonCTHD(int mahd)
-        {
-            return ct.LayMaMonCTHD(mahd);
-        }
     }
 }

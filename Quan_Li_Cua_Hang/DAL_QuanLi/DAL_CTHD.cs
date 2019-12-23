@@ -78,12 +78,5 @@ namespace DAL_QuanLi
             da.Fill(dtCTHD);
             return dtCTHD;
         }
-        public DataTable LayMaMonCTHD(int mahd)
-        {
-            SqlDataAdapter da = new SqlDataAdapter("select CTHD.mamon from CTHD,HOADON,MONAN where CTHD.mamon = MONAN.mamon and CTHD.mahd = HOADON.mahd and HOADON.mahd=" + mahd, _conn);
-            DataTable dtCTHD = new DataTable();
-            da.Fill(dtCTHD);
-            return dtCTHD;
-        }
     }
 }
