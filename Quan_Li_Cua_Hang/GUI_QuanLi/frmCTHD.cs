@@ -16,8 +16,6 @@ namespace GUI_QuanLi
 {
     public partial class frmCTHD : Form
     {
-        bool flag = true;
-        string sobantam = "";
         int mahdtam = 0;
         BUS_HoaDon hd = new BUS_HoaDon();
         BUS_CTHD ct = new BUS_CTHD();
@@ -41,7 +39,6 @@ namespace GUI_QuanLi
             {
                 tb_Ban.Text = row["ban"].ToString();
                 HoaDon.tb_SoBan.Text = row["ban"].ToString();
-                sobantam = row["ban"].ToString();
                 if (row["trigia"].ToString() == "0")
                 {
                     HoaDon.tb_TongTien.Text = row["trigia"].ToString();
@@ -62,19 +59,8 @@ namespace GUI_QuanLi
                 item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = row1["solg"].ToString() });
                 HoaDon.listView1.Items.Add(item);
                 HoaDon.tb_TongTien.Text = (tien + gia * sl).ToString();
-                tien = float.Parse(HoaDon.tb_TongTien.Text);
-                if(HoaDon.tb_SoBan.Text =="")
-                {
-                    if(flag == true)
-                    {
-                        MessageBox.Show("Yêu Cầu Nhập Số Bàn", "Thông Báo", MessageBoxButtons.OK);
-                        flag = false;
-                    }                    
-                }
-                else
-                {
-                    hd.CapNhatHoaDonv2(tien, int.Parse(HoaDon.tb_IDHD.Text), int.Parse(HoaDon.tb_SoBan.Text));
-                }                
+                tien = float.Parse(HoaDon.tb_TongTien.Text);               
+                hd.CapNhatHoaDonv2(tien, int.Parse(HoaDon.tb_IDHD.Text), int.Parse(HoaDon.tb_SoBan.Text));          
             }
             this.panel2.Controls.Add(HoaDon);
             HoaDon.Size = new Size(300, 450);
@@ -197,7 +183,6 @@ namespace GUI_QuanLi
                     item.Dispose();
                 }
                 tien = 0;
-                flag = true;
                 LoadHoaDon(mahdtam);
                 return true;
             }

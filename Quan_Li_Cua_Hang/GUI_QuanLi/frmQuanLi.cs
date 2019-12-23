@@ -102,7 +102,7 @@ namespace GUI_QuanLi
 
         private void Btn_DangXuat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to exit?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Bạn Có Muốn Thoát Không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
                 this.Hide();

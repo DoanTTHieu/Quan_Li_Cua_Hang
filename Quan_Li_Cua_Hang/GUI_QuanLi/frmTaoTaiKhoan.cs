@@ -85,6 +85,8 @@ namespace GUI_QuanLi
                 if (tb_MatKhauQuanLi.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập mật khẩu quản lí!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.Show();
+                    tb_MatKhauQuanLi.Focus();
                     return;
 
                 }
