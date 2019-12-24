@@ -42,6 +42,7 @@
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_TaiLai = new System.Windows.Forms.Button();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.fLoutMonAn.SuspendLayout();
@@ -57,11 +58,11 @@
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialTabControl1.Location = new System.Drawing.Point(0, 106);
-            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(1059, 536);
+            this.materialTabControl1.Size = new System.Drawing.Size(1059, 506);
             this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -70,10 +71,10 @@
             this.tabPage1.Controls.Add(this.fLoutMonAn);
             this.tabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1051, 505);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1051, 475);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Món Ăn";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -84,7 +85,7 @@
             this.fLoutMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fLoutMonAn.Location = new System.Drawing.Point(2, 2);
             this.fLoutMonAn.Name = "fLoutMonAn";
-            this.fLoutMonAn.Size = new System.Drawing.Size(1047, 501);
+            this.fLoutMonAn.Size = new System.Drawing.Size(1047, 471);
             this.fLoutMonAn.TabIndex = 1;
             // 
             // button1
@@ -105,9 +106,9 @@
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.fLoutMonNuoc);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1051, 505);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nước";
@@ -141,7 +142,7 @@
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialTabSelector1.Location = new System.Drawing.Point(0, 64);
-            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(2);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
             this.materialTabSelector1.Size = new System.Drawing.Size(1200, 44);
@@ -152,9 +153,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(1060, 107);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 531);
+            this.panel1.Size = new System.Drawing.Size(1, 540);
             this.panel1.TabIndex = 2;
             // 
             // materialLabel1
@@ -179,7 +180,7 @@
             this.btn_DoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btn_DoanhThu.Location = new System.Drawing.Point(1074, 248);
-            this.btn_DoanhThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DoanhThu.Name = "btn_DoanhThu";
             this.btn_DoanhThu.Size = new System.Drawing.Size(115, 30);
             this.btn_DoanhThu.TabIndex = 5;
@@ -197,7 +198,7 @@
             this.btn_DangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Underline);
             this.btn_DangXuat.Location = new System.Drawing.Point(1074, 282);
-            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(115, 31);
             this.btn_DangXuat.TabIndex = 6;
@@ -209,7 +210,7 @@
             // 
             this.pictureBox1.Image = global::GUI_QuanLi.Properties.Resources.user2;
             this.pictureBox1.Location = new System.Drawing.Point(1074, 108);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 115);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -220,16 +221,32 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(1062, 224);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel4.Margin = new System.Windows.Forms.Padding(6);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(138, 1);
             this.panel4.TabIndex = 7;
+            // 
+            // btn_TaiLai
+            // 
+            this.btn_TaiLai.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TaiLai.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_TaiLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.btn_TaiLai.Location = new System.Drawing.Point(941, 612);
+            this.btn_TaiLai.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_TaiLai.Name = "btn_TaiLai";
+            this.btn_TaiLai.Size = new System.Drawing.Size(115, 30);
+            this.btn_TaiLai.TabIndex = 8;
+            this.btn_TaiLai.Text = "Tải Lại";
+            this.btn_TaiLai.UseVisualStyleBackColor = false;
+            this.btn_TaiLai.Click += new System.EventHandler(this.btn_TaiLai_Click);
             // 
             // frmQuanLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.btn_TaiLai);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btn_DangXuat);
             this.Controls.Add(this.btn_DoanhThu);
@@ -238,7 +255,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lí";
@@ -269,5 +286,6 @@
         private System.Windows.Forms.FlowLayoutPanel fLoutMonNuoc;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_TaiLai;
     }
 }

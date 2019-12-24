@@ -44,24 +44,7 @@ namespace GUI_QuanLi
                 element.panel4.Enabled = true;
                 element.Size = new Size(250, 250);
                 element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
-                element.btnSave.Click += BtnSave_Click;
             }
-        }
-
-        private void BtnSave_Click(object sender, EventArgs e)
-        {            
-            foreach(Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
-            {
-                this.fLoutMonAn.Controls.Clear();
-            }
-            foreach (Control item in this.fLoutMonNuoc.Controls.OfType<QuanLy_MonAn>())
-            {
-                this.fLoutMonNuoc.Controls.Clear();
-            }           
-            this.fLoutMonAn.Controls.Add(button1);
-            this.fLoutMonNuoc.Controls.Add(button2);
-            loadmonan();
-            loadmonnuoc();
         }
 
         private void loadmonnuoc()
@@ -81,7 +64,6 @@ namespace GUI_QuanLi
                 element.panel4.Enabled = true;
                 element.Size = new Size(250, 300);
                 element.btnDel.Click += new EventHandler((o, e) => RemoveElement(o, e, fLoutMonAn));
-                element.btnSave.Click += BtnSave_Click;
             }
         }     
 
@@ -136,7 +118,6 @@ namespace GUI_QuanLi
             element.panel4.Enabled = true;
             element.Size = new Size(250, 250);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonAn));
-            element.btnSave.Click += BtnSave_Click;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -154,7 +135,22 @@ namespace GUI_QuanLi
             element.panel4.Enabled = true;
             element.Size = new Size(250, 300);
             element.btnDel.Click += new EventHandler((o, ev) => RemoveElement(o, ev, fLoutMonNuoc));
-            element.btnSave.Click += BtnSave_Click;
+        }
+
+        private void btn_TaiLai_Click(object sender, EventArgs e)
+        {
+            foreach (Control item in this.fLoutMonAn.Controls.OfType<QuanLy_MonAn>())
+            {
+                this.fLoutMonAn.Controls.Clear();
+            }
+            foreach (Control item in this.fLoutMonNuoc.Controls.OfType<QuanLy_MonAn>())
+            {
+                this.fLoutMonNuoc.Controls.Clear();
+            }
+            this.fLoutMonAn.Controls.Add(button1);
+            this.fLoutMonNuoc.Controls.Add(button2);
+            loadmonan();
+            loadmonnuoc();
         }
     }
 }
