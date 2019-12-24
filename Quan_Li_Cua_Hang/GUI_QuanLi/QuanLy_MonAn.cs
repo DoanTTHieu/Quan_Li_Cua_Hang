@@ -62,8 +62,8 @@ namespace GUI_QuanLi
 
         private void SetPic(String imgPath)
         {
-            picture.BackgroundImage = new Bitmap(imgPath);
-            picture.BackgroundImageLayout = ImageLayout.Stretch;
+            picture.Image = new Bitmap(imgPath);
+            picture.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void PrepareEditMode()
@@ -85,9 +85,52 @@ namespace GUI_QuanLi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (tbxTen.Text == "" || tbxGia.Text == "" || picture.BackgroundImage==null)
+            if (tbxTen.Text == "" && tbxGia.Text == "" && picture.Image==null)
             {
-                MessageBox.Show("Nhập Không Đầy Đủ Thông Tin Món Ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxTen.Focus();
+                tbxTen.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text == "" && tbxGia.Text == "" && picture.Image != null)
+            {
+                MessageBox.Show("Vui lòng nhập tên và giá cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxTen.Focus();
+                tbxTen.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text == "" && tbxGia.Text != "" && picture.Image == null)
+            {
+                MessageBox.Show("Vui lòng nhập tên và chọn hình cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxTen.Focus();
+                tbxTen.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text != "" && tbxGia.Text == "" && picture.Image == null)
+            {
+                MessageBox.Show("Vui lòng nhập giá và chọn hình cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxGia.Focus();
+                tbxGia.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text == "" && tbxGia.Text != "" && picture.Image != null)
+            {
+                MessageBox.Show("Vui lòng nhập tên cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxTen.Focus();
+                tbxTen.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text != "" && tbxGia.Text == "" && picture.Image != null)
+            {
+                MessageBox.Show("Vui lòng nhập giá cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                tbxGia.Focus();
+                tbxGia.BackColor = Color.AliceBlue;
+                return;
+            }
+            if (tbxTen.Text != "" && tbxGia.Text != "" && picture.Image == null)
+            {
+                MessageBox.Show("Vui lòng chọn hình cho món ăn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else
             {

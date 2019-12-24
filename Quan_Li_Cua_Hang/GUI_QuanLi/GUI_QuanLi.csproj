@@ -174,9 +174,7 @@
     <None Include="Resources\icons8_add_50px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\MonAn\Default.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Folder Include="Resources\MonAn\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,7 +36,7 @@ namespace BUS_QuanLi
                 new Task(() =>
                 {
                     DAL_MonAn.StartService();
-                    data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
+                    //data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
                     DAL_MonAn.Instance.UpdateInfo(data);
                 }).Start();
             } catch (Exception e)
@@ -52,7 +52,7 @@ namespace BUS_QuanLi
                 new Task(() =>
                 {
                     DAL_MonAn.StartService();
-                    data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
+                    //data.Hinhanh = ResourceUtil.CopyToResource(data.Hinhanh);
                     DAL_MonAn.Instance.AddInfo(data);
                 }).Start();
             }
