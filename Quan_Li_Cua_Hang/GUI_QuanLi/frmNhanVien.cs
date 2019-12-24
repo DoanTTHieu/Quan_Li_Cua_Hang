@@ -78,7 +78,8 @@ namespace GUI_QuanLi
                 this.flowHoaDon.Controls.Add(hoadon);               
                 hoadon.Size = new Size(300, 450);
                 hoadon.panel3.Size = new Size(65, 23);
-                hoadon.panel5.Size = new Size(100, 23);
+                hoadon.panel5.Size = new Size(10, 23);
+                hoadon.tb_TongTien.Size = new Size(63, 15);
                 hoadon.panel4.Visible = false;
                 hoadon.panel6.Size = new Size(65, 23);
                 hoadon.columnHeader1.Width = 130;

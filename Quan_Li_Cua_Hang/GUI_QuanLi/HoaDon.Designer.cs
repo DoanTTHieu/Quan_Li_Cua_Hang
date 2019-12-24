@@ -62,9 +62,8 @@
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 34);
+            this.panel1.Size = new System.Drawing.Size(521, 22);
             this.panel1.TabIndex = 0;
             // 
             // tb_IDHD
@@ -72,10 +71,9 @@
             this.tb_IDHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_IDHD.Dock = System.Windows.Forms.DockStyle.Right;
             this.tb_IDHD.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_IDHD.Location = new System.Drawing.Point(752, 0);
-            this.tb_IDHD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_IDHD.Location = new System.Drawing.Point(501, 0);
             this.tb_IDHD.Name = "tb_IDHD";
-            this.tb_IDHD.Size = new System.Drawing.Size(30, 23);
+            this.tb_IDHD.Size = new System.Drawing.Size(20, 15);
             this.tb_IDHD.TabIndex = 19;
             this.tb_IDHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -84,10 +82,9 @@
             this.tb_SoBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_SoBan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tb_SoBan.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_SoBan.Location = new System.Drawing.Point(55, 0);
-            this.tb_SoBan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_SoBan.Location = new System.Drawing.Point(36, 0);
             this.tb_SoBan.Name = "tb_SoBan";
-            this.tb_SoBan.Size = new System.Drawing.Size(28, 23);
+            this.tb_SoBan.Size = new System.Drawing.Size(19, 15);
             this.tb_SoBan.TabIndex = 18;
             this.tb_SoBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -97,33 +94,30 @@
             this.lblName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(0, 0);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 23);
+            this.lblName.Size = new System.Drawing.Size(36, 15);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Bàn :";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 640);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 416);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 52);
+            this.panel2.Size = new System.Drawing.Size(521, 34);
             this.panel2.TabIndex = 2;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btn_ChonMon);
+            this.panel6.Controls.Add(this.btn_ThanhToan);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(397, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(436, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(118, 52);
+            this.panel6.Size = new System.Drawing.Size(85, 34);
             this.panel6.TabIndex = 18;
             // 
             // btn_ChonMon
@@ -133,9 +127,8 @@
             this.btn_ChonMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ChonMon.ForeColor = System.Drawing.Color.Black;
             this.btn_ChonMon.Location = new System.Drawing.Point(0, 0);
-            this.btn_ChonMon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_ChonMon.Name = "btn_ChonMon";
-            this.btn_ChonMon.Size = new System.Drawing.Size(118, 52);
+            this.btn_ChonMon.Size = new System.Drawing.Size(92, 34);
             this.btn_ChonMon.TabIndex = 30;
             this.btn_ChonMon.Text = "Chọn Món";
             this.btn_ChonMon.UseVisualStyleBackColor = true;
@@ -143,12 +136,11 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_ThanhToan);
+            this.panel3.Controls.Add(this.btn_ChonMon);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(515, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(258, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(138, 52);
+            this.panel3.Size = new System.Drawing.Size(92, 34);
             this.panel3.TabIndex = 16;
             // 
             // btn_ThanhToan
@@ -158,9 +150,8 @@
             this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btn_ThanhToan.Location = new System.Drawing.Point(0, 0);
-            this.btn_ThanhToan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(138, 52);
+            this.btn_ThanhToan.Size = new System.Drawing.Size(85, 34);
             this.btn_ThanhToan.TabIndex = 31;
             this.btn_ThanhToan.Text = "Thanh Toán";
             this.btn_ThanhToan.UseVisualStyleBackColor = true;
@@ -171,12 +162,11 @@
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.tb_TongTien);
             this.panel5.Controls.Add(this.lbTongTien);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(4, 8, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(266, 52);
+            this.panel5.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
+            this.panel5.Size = new System.Drawing.Size(258, 34);
             this.panel5.TabIndex = 15;
             // 
             // label1
@@ -185,10 +175,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Left;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(206, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(136, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 23);
+            this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 18;
             this.label1.Text = "VND";
             // 
@@ -197,10 +186,9 @@
             this.tb_TongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TongTien.Dock = System.Windows.Forms.DockStyle.Left;
             this.tb_TongTien.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TongTien.Location = new System.Drawing.Point(112, 8);
-            this.tb_TongTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_TongTien.Location = new System.Drawing.Point(73, 5);
             this.tb_TongTien.Name = "tb_TongTien";
-            this.tb_TongTien.Size = new System.Drawing.Size(94, 23);
+            this.tb_TongTien.Size = new System.Drawing.Size(63, 15);
             this.tb_TongTien.TabIndex = 16;
             // 
             // lbTongTien
@@ -208,10 +196,9 @@
             this.lbTongTien.AutoSize = true;
             this.lbTongTien.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbTongTien.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(4, 8);
-            this.lbTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTongTien.Location = new System.Drawing.Point(3, 5);
             this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(108, 23);
+            this.lbTongTien.Size = new System.Drawing.Size(70, 15);
             this.lbTongTien.TabIndex = 17;
             this.lbTongTien.Text = "Tổng Tiền :";
             // 
@@ -219,10 +206,9 @@
             // 
             this.panel4.Controls.Add(this.btn_XacNhan);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(653, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(350, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(129, 52);
+            this.panel4.Size = new System.Drawing.Size(86, 34);
             this.panel4.TabIndex = 17;
             // 
             // btn_XacNhan
@@ -232,9 +218,8 @@
             this.btn_XacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_XacNhan.ForeColor = System.Drawing.Color.Black;
             this.btn_XacNhan.Location = new System.Drawing.Point(0, 0);
-            this.btn_XacNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_XacNhan.Name = "btn_XacNhan";
-            this.btn_XacNhan.Size = new System.Drawing.Size(129, 52);
+            this.btn_XacNhan.Size = new System.Drawing.Size(86, 34);
             this.btn_XacNhan.TabIndex = 32;
             this.btn_XacNhan.Text = "Xác Nhận";
             this.btn_XacNhan.UseVisualStyleBackColor = true;
@@ -251,10 +236,9 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 34);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listView1.Location = new System.Drawing.Point(0, 22);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(782, 606);
+            this.listView1.Size = new System.Drawing.Size(521, 394);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -277,16 +261,15 @@
             // 
             // HoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "HoaDon";
-            this.Size = new System.Drawing.Size(782, 692);
+            this.Size = new System.Drawing.Size(521, 450);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
